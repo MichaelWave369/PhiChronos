@@ -5,7 +5,7 @@ const C=299792458, HBAR=6.62607015e-34/(2*Math.PI)
 const WIDTH_MIN=1e3, WIDTH_MAX=1e9
 function validate(alpha,L,tau) {
   if(![alpha,L,tau].every(Number.isFinite)||alpha<0||alpha>1||
-     L<WIDTH_MIN||L>WIDTH_MAX||tau<1e-24||tau>1e-3 && false) {
+     L<WIDTH_MIN||L>WIDTH_MAX) {
     throw new RangeError('invalid curved 2D parameters')
   }
   // Proper time sampling in seconds: [1e-24,1e-3] is deliberately NOT

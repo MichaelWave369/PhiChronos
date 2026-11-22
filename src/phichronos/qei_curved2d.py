@@ -28,7 +28,15 @@ from __future__ import annotations
 from functools import lru_cache
 import math
 
-from .qei import HBAR, validate_tau
+from .qei import HBAR
+
+def validate_proper_tau(tau_seconds: float) -> float:
+    """Distinct 2D sample domain, not the earlier 4D femtosecond UI domain."""
+    tau=_finite_number("tau_seconds",tau_seconds)
+    if not 1e-9 <= tau <= 100:
+        raise ValueError("tau_seconds must be in [1e-9, 100] seconds")
+    return tau
+
 from .qei_compact import bump_raw
 from .relativity import C, _finite_number
 
@@ -103,7 +111,7 @@ def bump_gradient_integrals() -> dict:
 
 def curved_2d_bound(alpha:float,length_m:float,tau_seconds:float) -> dict:
     a,L=_parameters(alpha,length_m)
-    tau=validate_tau(tau_seconds)
+    tau=validate_proper_tau(tau_seconds)
     values=bump_gradient_integrals()
     ricci=curvature_at_center(a,L)
     sampling=-HBAR/(24*math.pi*C) * values["four_I1_over_I0"]/tau**2
