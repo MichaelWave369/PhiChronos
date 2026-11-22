@@ -1,0 +1,39 @@
+/* PhiChronos v0.5 QEI research */
+.qei-lab{background:#0e1929;border:1px solid #2d4357;border-radius:11px;overflow:hidden;margin-top:18px}
+.qei-tabs{display:flex;flex-wrap:wrap;gap:8px;padding:13px;background:#0b1422;border-bottom:1px solid #293d50}
+.qei-tabs button{border:1px solid transparent;background:#152536;color:#95afc2;border-radius:5px;padding:12px 15px;display:inline-flex;align-items:center;gap:7px;font:600 12px 'DM Sans',sans-serif}
+.qei-tabs button.active{background:#25514e;color:#acf2e3;border-color:#477c76}
+.qei-inner{padding:27px}.qei-eyebrow{font:10px 'DM Mono',monospace;letter-spacing:1.25px;color:#92e6db}
+.qei-heading h3{font:600 clamp(25px,3vw,37px) 'Space Grotesk',sans-serif;margin:15px 0 10px;letter-spacing:-1px}
+.qei-heading p{font-size:13px;line-height:1.75;color:#9dafc2;max-width:850px;margin-bottom:26px}
+.qei-columns{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:17px}
+.qei-controls,.qei-results{background:#0b1725;border:1px solid #2d4154;border-radius:8px;padding:20px;min-width:0}
+.qei-controls label{font-size:12px;color:#a9bccc;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin:19px 0 12px}
+.qei-controls label:first-child{margin-top:0}.qei-controls label b{color:#9ae9dc;font:12px 'DM Mono',monospace}
+.qei-controls input{width:100%;accent-color:#8ee3d5;cursor:pointer}
+.qei-range{display:flex;justify-content:space-between;font:10px 'DM Mono',monospace;color:#7c95a8;margin:4px 0 25px}
+.qei-formula{background:#14273a;border:1px solid #36546a;color:#d6eae7;padding:17px;border-radius:6px;margin:27px 0 17px;font:15px/1.5 'DM Mono',monospace}
+.qei-formula small{display:block;font:9px 'DM Mono',monospace;color:#8ddacc;margin:16px 0 5px}
+.qei-formula small:first-child{margin-top:0}.qei-explain{display:flex;align-items:start;gap:9px;color:#7dbdb9}
+.qei-explain svg{flex-shrink:0;margin-top:2px}.qei-explain p{font-size:11px;line-height:1.8;color:#8da8ba;margin:0}
+.qei-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.qei-value{border:1px solid #2e4558;background:#102134;border-radius:6px;padding:16px;min-width:0}
+.qei-value span{font:9px 'DM Mono',monospace;letter-spacing:.7px;color:#8ca8b8;display:block}
+.qei-value strong{font:600 clamp(15px,1.8vw,21px) 'Space Grotesk',sans-serif;color:#c6eadf;display:block;overflow-wrap:anywhere;margin:12px 0 7px}
+.qei-value small{font-size:10px;color:#7392a5}
+.qei-verdict{display:flex;gap:11px;align-items:start;margin:15px 0;padding:16px;background:#173a34;border:1px solid #346d60;border-radius:6px;color:#a2e8d5}
+.qei-verdict svg{flex-shrink:0;margin-top:2px}.qei-verdict strong{font-size:14px;color:#d7f6ea}
+.qei-verdict p{margin:7px 0 0;font-size:11px;line-height:1.7;color:#a3bdc4}
+.qei-verdict.qei-excluded{background:#322632;border-color:#785363;color:#ffc9b0}
+.qei-verdict.qei-excluded strong{color:#ffcfb5}
+.qei-plot{background:#111e2e;border:1px solid #2c4356;border-radius:6px;padding:13px}
+.qei-plot-top{display:flex;justify-content:space-between;gap:10px}.qei-plot-top strong{font-size:12px}.qei-plot-top span{color:#b9a78b;font:10px 'DM Mono',monospace}
+.qei-graph{width:100%;display:block}.qei-plot p{font-size:10px;color:#7f9cb0;line-height:1.8}
+.qei-checklist{margin-top:18px;background:#142437;border:1px solid #2d4961;border-radius:6px;padding:20px}
+.qei-checklist h4{font:600 15px 'Space Grotesk';margin:0 0 14px}.qei-checklist p{margin:8px 0;color:#9cb5c4;font-size:12px}
+.qei-checklist p:before{content:'○';margin-right:9px;color:#eac08b}
+.qei-footer{border-top:1px solid #2c4053;padding:17px 25px;color:#89a4b5;font-size:11px}
+.qei-footer>div,.qei-footer>a{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.qei-footer a{color:#96e7d8;display:inline-flex;align-items:center;gap:3px}
+.qei-footer p{line-height:1.65}
+@media(max-width:950px){.qei-columns{grid-template-columns:1fr}}
+@media(max-width:560px){.qei-inner{padding:17px}.qei-stats{grid-template-columns:1fr}.qei-controls,.qei-results{padding:14px}.qei-tabs button{font-size:11px;padding:9px}.qei-footer{padding:15px}}
