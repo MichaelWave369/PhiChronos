@@ -10,6 +10,7 @@ from .qei import flat_qei_bounds, sampled_toy_pulse, wormhole_domain_audit
 from .qei_compact import compact_flat_qei, compact_plateau_trial, compact_sampler_density
 from .curvature import curvature_audit
 from .qei_curved2d import curved_2d_bound, curved_2d_trial
+from .scalar_modes import dimensionless_potential, scalar_mode_potential, s_wave_scattering
 __all__ = [
     "lorentz_factor", "proper_time_years", "kinetic_energy_joules",
     "schwarzschild_clock_rate", "altitude_time_gain_ns_per_day",
@@ -20,4 +21,5 @@ __all__ = [
     "flat_qei_bounds", "sampled_toy_pulse", "wormhole_domain_audit",
     "compact_flat_qei", "compact_plateau_trial", "compact_sampler_density", "curvature_audit",
     "curved_2d_bound", "curved_2d_trial",
+    "dimensionless_potential", "scalar_mode_potential", "s_wave_scattering",
 ]

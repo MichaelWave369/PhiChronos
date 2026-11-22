@@ -52,3 +52,9 @@ Independent replication comes before striking headlines. A quantum simulation of
 - Flanagan Eq.1.7 (2002; corrected v4 2020) for a geodesic at x=0 in globally conformal 1+1D static background sigma(x)=alpha exp(-x²/2L²). Curvature term explicitly included and separately testable.
 - Normalized smooth bump computes I0 and first-derivative integral I1 with Simpson and independent midpoint; Ricci center analytically compared with finite-difference conformal factor.
 - Restored SI units J/m and enforced 2D dimension labels; no comparison to 4D wormhole stress J/m³. No 4D field state, curved Hadamard QEI or backreaction solved.
+
+### v0.8 4D free test-scalar wave scattering
+- Derive the minimally coupled massless Klein–Gordon radial operator on the fixed ultrastatic Ellis metric; V_ell(l)=ell(ell+1)/R²+r0²/R⁴. Positive potential is a fixed-background probe mode statement, not gravitational stability.
+- S-wave reflection/transmission from real transfer-matrix RK4 in x=l/r0 with explicit truncated domain and steps. Wronskian residual det(M)-1 and flux residual T+R-1 retained.
+- Cross-check the paper's low-k limit T_power/kappa² -> 4/pi² and an entirely separate constant square barrier with exact elementary transmission formula. Compare domain extent and r0 rescaling.
+- No 4D curved Hadamard QEI, state, renormalized stress or backreaction calculation.

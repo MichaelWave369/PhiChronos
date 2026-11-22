@@ -1,4 +1,4 @@
-# Research roadmap | version 0.7
+# Research roadmap | version 0.8
 
 ## The guiding question
 
@@ -43,6 +43,10 @@ Which time effects have been measured, which are extrapolations within accepted 
 - Separate 'exists in a mathematical metric' from 'could be created in our universe.'
 
 **Exit criteria:** a constraint matrix with arguments both for and against physical realizability.
+
+## v0.8 - True 4D fixed-background scalar wave operator and scattering
+
+**Implemented:** A free minimally coupled massless scalar probe on our *actual 3+1D Ellis wormhole metric*; separated Klein–Gordon equation, all angular radial potentials, two-ended s-wave scattering, Wronskian and flux checks, and a source-backed low-frequency transmission coefficient. This is meaningful curved-field dynamics but **not** a Hadamard quantum state, renormalized stress tensor, or evaluated Fewster–Smith QEI. The original 4D quantum inequality and backreaction goals stay open.
 
 ## v0.7 - Published curved-spacetime QEI reference, different dimension
 

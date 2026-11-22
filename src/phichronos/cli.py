@@ -15,6 +15,7 @@ from .qei import flat_qei_bounds, sampled_toy_pulse, wormhole_domain_audit
 from .qei_compact import compact_flat_qei, compact_plateau_trial
 from .curvature import curvature_audit
 from .qei_curved2d import curved_2d_bound, curved_2d_trial
+from .scalar_modes import s_wave_scattering
 
 
 def main() -> None:
@@ -63,6 +64,11 @@ def main() -> None:
     two.add_argument("--length-m",type=float,required=True)
     two.add_argument("--tau-s",type=float,required=True)
     two.add_argument("--plateau-amplitude-j-per-m",type=float,default=None)
+    sw = sub.add_parser("scalar-wave",help="curved 4D fixed Ellis metric, massless test-scalar s-wave scattering; NOT a QEI")
+    sw.add_argument("--throat-m",type=float,required=True)
+    sw.add_argument("--kappa",type=float,required=True,help="dimensionless frequency omega*r0/c")
+    sw.add_argument("--extent",type=float,default=32,help="numerical half-domain in throat units")
+    sw.add_argument("--steps",type=int,default=4096)
     args = parser.parse_args()
 
     try:
@@ -86,6 +92,8 @@ def main() -> None:
         elif args.model == "qei":
             result = flat_qei_bounds(args.tau_s) if args.pulse_amplitude_j_m3 is None else sampled_toy_pulse(
                 args.pulse_amplitude_j_m3, args.pulse_width_s, args.tau_s)
+        elif args.model == "scalar-wave":
+            result = s_wave_scattering(args.throat_m,args.kappa,args.extent,args.steps)
         elif args.model == "qei-curved2d":
             result = (curved_2d_bound(args.alpha,args.length_m,args.tau_s)
                       if args.plateau_amplitude_j_per_m is None
