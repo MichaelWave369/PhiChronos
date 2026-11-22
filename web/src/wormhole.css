@@ -1,0 +1,44 @@
+/* PhiChronos v0.4: postulated Morris–Thorne wormhole constraint lab */
+.wormhole-lab{background:#101a29;border:1px solid #2c4155;border-radius:11px;padding:28px;margin-top:18px;color:#e6edf7}
+.wormhole-overline{display:flex;align-items:center;gap:9px;font:10px 'DM Mono',monospace;color:#9fe7dc;letter-spacing:1.5px}
+.wormhole-header h3{font:600 clamp(26px,3vw,36px) 'Space Grotesk',sans-serif;letter-spacing:-1px;margin:18px 0 11px}
+.wormhole-header p{font-size:13px;line-height:1.8;color:#9cafc3;max-width:790px;margin-bottom:25px}
+.wormhole-main{display:grid;grid-template-columns:minmax(0,.73fr) minmax(0,1.27fr);gap:17px}
+.wormhole-controls,.wormhole-output{background:#0b1524;border:1px solid #2d4256;border-radius:8px;padding:20px;min-width:0}
+.wormhole-controls label{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:12px;color:#a4bacb;margin:13px 0 13px}
+.wormhole-controls label strong{font:12px 'DM Mono',monospace;color:#a0ede2}
+.wormhole-controls input{width:100%;accent-color:#89e8d9}
+.wormhole-range{display:flex;justify-content:space-between;font:10px 'DM Mono',monospace;color:#6d8ca1;margin:5px 0 24px}
+.wormhole-equations{background:#12263a;border:1px solid #2e5161;border-radius:7px;padding:17px;margin:24px 0 17px}
+.wormhole-equations>span{font:10px 'DM Mono',monospace;letter-spacing:1px;color:#8fdccd}
+.wormhole-equations code{display:block;font:15px/1.85 'DM Mono',monospace;color:#e1f1ed;margin:12px 0}
+.wormhole-equations small{font:10px/1.7 'DM Mono',monospace;color:#7299ab;display:block}
+.wormhole-cross{display:block;width:100%;max-width:430px;margin:auto}
+.wormhole-source{display:flex;align-items:center;gap:7px;color:#89e8d9;font-size:11px;margin:18px 0 3px}
+.wormhole-status{display:flex;align-items:center;justify-content:space-between;background:#342a34;border:1px solid #745361;border-radius:7px;padding:18px;gap:14px;color:#ffad91}
+.wormhole-status span{font:10px 'DM Mono',monospace;letter-spacing:.6px;display:block;margin-bottom:8px}
+.wormhole-status strong{font:600 20px 'Space Grotesk',sans-serif;color:#ffcfb4}
+.wormhole-stats{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:15px 0}
+.wormhole-stat{background:#122334;border:1px solid #2e4557;border-radius:6px;padding:16px;min-width:0}
+.wormhole-stat>span{display:block;font:9px 'DM Mono',monospace;letter-spacing:.5px;color:#809eaf}
+.wormhole-stat strong{font:600 clamp(16px,1.7vw,22px) 'Space Grotesk',sans-serif;display:block;margin:12px 0 6px;word-break:break-word;color:#9fe6d8}
+.wormhole-stat-negative strong{color:#ffbb91}.wormhole-stat small{color:#7894a7;font-size:10px}
+.wormhole-view-tabs{display:flex;gap:6px;margin:15px 0 12px;flex-wrap:wrap}
+.wormhole-view-tabs button{border:1px solid #385568;border-radius:5px;background:#1a2c3b;color:#9bb4c6;font-size:11px;padding:10px 13px}
+.wormhole-view-tabs button.active{background:#255550;color:#a1f0e5;border-color:#52978e}
+.wormhole-chart{background:#0e1b2b;border:1px solid #2b4054;border-radius:7px;padding:13px}
+.wormhole-chart-head{display:flex;align-items:center;justify-content:space-between;gap:11px}
+.wormhole-chart-head strong{font-size:13px}.wormhole-chart-head span{font:10px 'DM Mono',monospace;color:#8197a9}
+.wormhole-chart svg{display:block;width:100%;max-width:760px;margin:auto}
+.wormhole-legend{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0}
+.wormhole-legend span{display:flex;align-items:center;gap:6px;font-size:10px;color:#9dafc0}
+.wormhole-legend i{width:11px;height:3px;display:inline-block;border-radius:2px}
+.wormhole-chart p{font-size:10px;line-height:1.7;color:#839cad;margin:8px 0 1px}
+.wormhole-smallfacts{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.wormhole-smallfacts span{border:1px solid #3c5163;background:#14263a;padding:8px 10px;font:10px 'DM Mono',monospace;color:#a0b4c2;border-radius:5px}
+.wormhole-caution{display:flex;align-items:start;gap:13px;background:#242532;border:1px solid #5d526c;border-radius:7px;padding:19px;margin-top:17px;color:#b3b7d1}
+.wormhole-caution>svg{flex-shrink:0;margin-top:3px}.wormhole-caution strong{font-size:14px;color:#eee4ff}
+.wormhole-caution p{font-size:11px;line-height:1.85;margin:8px 0 14px}
+.wormhole-literature{display:flex;gap:15px;flex-wrap:wrap}.wormhole-literature a{display:flex;align-items:center;gap:4px;color:#a2e5db;font-size:11px}
+@media(max-width:930px){.wormhole-main{grid-template-columns:1fr}.wormhole-controls{display:block}.wormhole-cross{max-width:370px}}
+@media(max-width:620px){.wormhole-lab{padding:17px}.wormhole-stats{grid-template-columns:1fr}.wormhole-controls,.wormhole-output{padding:15px}.wormhole-chart-head{flex-direction:column;align-items:flex-start}.wormhole-status strong{font-size:18px}}
