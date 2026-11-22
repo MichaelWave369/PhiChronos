@@ -8,6 +8,8 @@ from .relativity import (
 )
 from .causality import classify_interval, proper_time_seconds
 from .boost import lorentz_boost, minkowski_interval_m2, causal_region
+from .chronology import quotient_analysis, winding_history
+from .postselection import postselected_cnot
 
 
 def main() -> None:
@@ -26,6 +28,13 @@ def main() -> None:
     b.add_argument("--beta", type=float, required=True)
     b.add_argument("--time-seconds", type=float, required=True)
     b.add_argument("--x-meters", type=float, required=True)
+    q = sub.add_parser("quotient", help="mathematically imposed Minkowski cylinder, NOT a physical time machine")
+    q.add_argument("--delta-ct", type=float, required=True, help="time shift in light-seconds (numerically seconds)")
+    q.add_argument("--delta-x", type=float, required=True, help="spatial shift in light-seconds")
+    q.add_argument("--turns", type=int, default=3)
+    p = sub.add_parser("postselect", help="Bell-pair CNOT postselection toy, NOT real backward travel")
+    p.add_argument("--prob-zero", type=float, required=True)
+    p.add_argument("--shots", type=int, default=1000)
     args = parser.parse_args()
 
     try:
@@ -43,6 +52,11 @@ def main() -> None:
                 "height_m": args.meters,
                 "clock_gain_ns_per_day": altitude_time_gain_ns_per_day(args.meters),
             }
+        elif args.model == "quotient":
+            result = quotient_analysis(args.delta_ct, args.delta_x)
+            result["winding_history"] = winding_history(args.delta_ct, args.delta_x, args.turns)
+        elif args.model == "postselect":
+            result = postselected_cnot(args.prob_zero, args.shots)
         elif args.model == "boost":
             tp, xp = lorentz_boost(args.time_seconds, args.x_meters, args.beta)
             result = {

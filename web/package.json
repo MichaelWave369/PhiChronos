@@ -1,12 +1,12 @@
 {
   "name": "phichronos-dashboard",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "test": "node --test src/physics.test.js",
+    "test": "node --test src/*.test.js",
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {

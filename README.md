@@ -6,12 +6,15 @@
 
 PhiChronos separates **measured effects**, **validated mathematical models**, and **unverified hypotheses**. The project does **not** claim that backward time travel is possible, or that simulating a closed timelike curve physically sends information to the past.
 
-## What's working in v0.2
+## What's working in v0.3
 
 - **Relativity engine (Python stdlib):** Lorentz factor, elapsed proper time, relativistic kinetic energy, stationary Schwarzschild clock comparison, and local weak-field altitude comparison.
 - **Causality tools:** classify timelike, lightlike, and spacelike separations in flat 1+1-dimensional spacetime.
 - **Lorentz boost engine:** forward and inverse coordinate transforms, signed Minkowski intervals, causal regions, and tests of interval invariance.
 - **Interactive Minkowski explorer:** two frames, light cones, tilted axes, presets, and transformed coordinates with live observer-velocity controls.
+- **Chronology protection lab:** explicit flat-spacetime quotient/identification toy for timelike, null and spacelike generators; does not represent an engineered CTC.
+- **Postselected Bell CNOT toy:** exact outcome probability, expected accepted/discarded shots, and explicit handling of zero-probability postselection.
+- **Cited CTC constraint matrix:** Gödel, Kerr, Tipler, wormholes, Hawking chronology protection, and Minkowski quotient, with limitations and evidence status.
 - **Unit tests and GitHub Actions CI** for boundaries and reference values.
 - **React research dashboard** with live forward-time-travel and altitude clock simulations; source links and epistemic status labels.
 - **Evidence ledger + staged research program** to separate demonstrations, theoretical models, and speculation.
@@ -28,6 +31,8 @@ Try the CLI:
     PYTHONPATH=src python -m phichronos.cli altitude --meters 1
     PYTHONPATH=src python -m phichronos.cli interval --dt-seconds 1 --distance-meters 1000
     PYTHONPATH=src python -m phichronos.cli boost --beta 0.6 --time-seconds 5 --x-meters 899377374
+    PYTHONPATH=src python -m phichronos.cli quotient --delta-ct 5 --delta-x 3 --turns 3
+    PYTHONPATH=src python -m phichronos.cli postselect --prob-zero 0.5 --shots 1000
 
 For the browser dashboard:
 
@@ -46,9 +51,15 @@ Live site: https://michaelwave369.github.io/PhiChronos/
 4. Postselected CTC quantum circuit experiments emulate a mathematical model, **not physical travel into the past**.
 5. All claims must have a source, uncertainty/assumptions, reproducibility instructions, and a proposed falsification route.
 
-Read [Lorentz model methodology](docs/LORENTZ_MODEL.md), [Research Roadmap](docs/RESEARCH_ROADMAP.md), [Reproducibility](docs/REPRODUCIBILITY.md), and [Safety and Scope](docs/SAFETY_AND_SCOPE.md).
+Read [Chronology model](docs/CHRONOLOGY_MODEL.md), [Lorentz model methodology](docs/LORENTZ_MODEL.md), [Research Roadmap](docs/RESEARCH_ROADMAP.md), [Reproducibility](docs/REPRODUCIBILITY.md), and [Safety and Scope](docs/SAFETY_AND_SCOPE.md).
 
 ## Sources to begin
+
+- Hawking, [Chronology protection conjecture (1992)](https://doi.org/10.1103/PhysRevD.46.603)
+- Morris, Thorne and Yurtsever, [Wormholes, time machines and the weak energy condition (1988)](https://doi.org/10.1103/PhysRevLett.61.1446)
+- Kontou, [Wormhole restrictions from quantum energy inequalities (2024)](https://doi.org/10.3390/universe10070291)
+- Lloyd et al., [P-CTC postselection circuit (2011)](https://doi.org/10.1103/PhysRevLett.106.040403)
+- [Constraint matrix](research/ctc-constraints.json)
 
 - OpenStax, [The Lorentz Transformation](https://openstax.org/books/university-physics-volume-3/pages/5-5-the-lorentz-transformation)
 

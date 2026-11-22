@@ -1,4 +1,4 @@
-# Research roadmap | version 0.2
+# Research roadmap | version 0.3
 
 ## The guiding question
 
@@ -31,7 +31,9 @@ Which time effects have been measured, which are extrapolations within accepted 
 
 **Exit criteria:** every result states the metric and demonstrates equations, not just a plotted trajectory.
 
-## Phase 3 — Candidate CTC models (explicitly speculative as physics)
+## Phase 3 — Candidate CTC models (v0.3 research scaffold, NOT proven feasibility)
+
+**Implemented:** A sourced constraint ledger of six approaches/obstructions; a testable flat 1+1D cyclic quotient that illustrates a CTC only if timelike identification is imposed. **Not done:** deriving a dynamically formed physical time machine, energy-inequality solutions, global stability proofs.
 
 - Literature-map Gödel, Kerr-related geometries, rotating cylinder proposals and traversable wormholes.
 - Inventory energy conditions, exotic stress-energy requirements and chronology protection.
@@ -40,7 +42,9 @@ Which time effects have been measured, which are extrapolations within accepted 
 
 **Exit criteria:** a constraint matrix with arguments both for and against physical realizability.
 
-## Phase 4 — Quantum-information model lab
+## Phase 4 — Quantum-information model lab (v0.3 P-CTC circuit toy)
+
+**Implemented:** Bell-state postselection of a CNOT on a three-qubit toy system, success probability accounting, zero-success boundary tests, independent amplitude contraction test. **Not done:** full circuit hardware reproduction, statistical sampling, general noisy quantum channels.
 
 - Reproduce postselected CTC toy calculations, with postselection success probabilities and no-signaling caveats.
 - Study how a model treats consistency and paradoxes.
@@ -62,7 +66,7 @@ Which time effects have been measured, which are extrapolations within accepted 
 1. Validate weak-field height model against a NIST publication and uncertainty budget.
 2. Add 1+1D Lorentz boost transformations and invariant tests. **Implemented in v0.2**.
 3. Create evidence-record JSON schema and CI provenance validation.
-4. Summarize chronology protection and quantum energy inequalities.
-5. Implement a *labeled simulation* of a postselected CTC protocol, including success rates.
+4. Summarize chronology protection and quantum energy inequalities. **Initial sourced ledger in v0.3; deeper derivations open.**
+5. Implement a *labeled simulation* of a postselected CTC protocol, including success rates. **One ideal Bell CNOT model in v0.3; hardware replication open.**
 
 **An inconclusive or impossible result counts as progress if it rules out a bad assumption.**

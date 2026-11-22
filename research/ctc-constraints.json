@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-11-22",
+  "scope": "Published mathematical models, conjectures, and hypothetical proposals; NONE is a demonstrated time machine.",
+  "entries": [
+    {
+      "id": "GODEL",
+      "name": "Gödel rotating universe",
+      "kind": "exact GR spacetime",
+      "status": "mathematical-model",
+      "assumptions": "Homogeneous rotating dust cosmology with a negative cosmological constant in its original form.",
+      "obstacles": "Unlike the observed expanding Universe; no proposed local mechanism to manufacture the global solution.",
+      "energy": "A classical matter-and-cosmological-constant solution; the central obstacle is global cosmological realism, not simply a generic negative-energy requirement.",
+      "claim": "The Gödel solution admits closed timelike curves.",
+      "sources": [
+        "https://doi.org/10.3390/universe7010012",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8919128/"
+      ],
+      "next_check": "Read the exact metric; reproduce the norm of candidate closed curves and describe its global boundary assumptions."
+    },
+    {
+      "id": "KERR",
+      "name": "Maximal Kerr extension",
+      "kind": "idealized rotating black hole",
+      "status": "mathematical-model",
+      "assumptions": "An analytically extended ideal Kerr vacuum geometry, including interior regions beyond the Cauchy horizon.",
+      "obstacles": "Inner-horizon instability and questions about whether a maximal analytic extension represents astrophysical collapse.",
+      "energy": "Vacuum outside the source in the idealized solution; instability and access are the major outstanding issues.",
+      "claim": "Certain regions of a maximal extension contain CTCs, not demonstrated accessible paths in real black holes.",
+      "sources": [
+        "https://doi.org/10.3390/universe7010012",
+        "https://plato.stanford.edu/Entries/Spacetime-singularities/index.html"
+      ],
+      "next_check": "Document Cauchy-horizon instability and the assumptions used in analytic continuation."
+    },
+    {
+      "id": "TIPLER",
+      "name": "Van Stockum / Tipler cylinder",
+      "kind": "rotating cylindrical GR geometry",
+      "status": "mathematical-model",
+      "assumptions": "Special rapidly rotating cylindrical matter configurations, including idealizations extending infinitely in length.",
+      "obstacles": "Infinite extent or severe idealizations, plus unknown assembly and stability.",
+      "energy": "Not reducible to a simple universal negative-energy claim; depends on the exact model and matter distribution.",
+      "claim": "A sufficiently rapidly rotating idealized cylinder solution can admit causality violation.",
+      "sources": [
+        "https://doi.org/10.1103/PhysRevD.9.2203"
+      ],
+      "next_check": "Compare finite-length limitations with the idealized cylinder solution."
+    },
+    {
+      "id": "WORMHOLE",
+      "name": "Time-shifted traversable wormhole",
+      "kind": "conditional wormhole construction",
+      "status": "hypothetical-physical-mechanism",
+      "assumptions": "A stable traversable wormhole with two mouths and an engineered relative clock offset.",
+      "obstacles": "No observed traversable wormholes; maintaining a throat typically requires violations of classical energy conditions, constrained by quantum energy inequalities.",
+      "energy": "Negative averaged energy and quantum inequality bounds matter for many canonical traversable models; no general engineering recipe.",
+      "claim": "If an appropriate traversable wormhole were available, a time offset between mouths may allow a CTC under additional assumptions.",
+      "sources": [
+        "https://doi.org/10.1103/PhysRevLett.61.1446",
+        "https://doi.org/10.3390/universe10070291"
+      ],
+      "next_check": "Specify stress-energy assumptions and bound the negative-energy requirements without implying engineering feasibility."
+    },
+    {
+      "id": "HAWKING",
+      "name": "Chronology protection conjecture",
+      "kind": "proposed physical obstruction",
+      "status": "conjecture-not-theorem",
+      "assumptions": "Quantum backreaction and global causal structure may prevent formation of chronology-violating regions.",
+      "obstacles": "No universal proof across all possible quantum-gravity regimes; specific arguments require specific assumptions.",
+      "energy": "Divergences or large quantum stress near candidate chronology horizons are model-dependent constraints.",
+      "claim": "Chronology protection is supported by theoretical arguments but is not a universal settled theorem.",
+      "sources": [
+        "https://doi.org/10.1103/PhysRevD.46.603",
+        "https://doi.org/10.1103/PhysRevD.47.554"
+      ],
+      "next_check": "Build a conditions table separating proven restricted results from broader conjectures."
+    },
+    {
+      "id": "QUOTIENT",
+      "name": "Time-identified Minkowski cylinder",
+      "kind": "deliberately imposed topology",
+      "status": "illustrative-toy-model",
+      "assumptions": "Identify events separated by a constant Minkowski translation vector; time-like compactification is imposed by hand.",
+      "obstacles": "An identification rule does not explain how such topology could be engineered or dynamically produced in our Universe.",
+      "energy": "No stress-energy calculation or physical topology-change mechanism is supplied in this toy.",
+      "claim": "Timelike identification gives a closed timelike generator by construction; spacelike identification does not.",
+      "sources": [
+        "https://doi.org/10.3390/universe7010012"
+      ],
+      "next_check": "Verify classification numerically and avoid equating the quotient with a physically constructible metric."
+    }
+  ]
+}

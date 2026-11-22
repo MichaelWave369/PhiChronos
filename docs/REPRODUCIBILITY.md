@@ -25,3 +25,9 @@ Independent replication comes before striking headlines. A quantum simulation of
 - The web visual uses light-seconds for x and ct. Multiplying a time coordinate in seconds by c yields meters; one light-second is the distance c travels in one SI second.
 - Event B is relative to event A at origin; boosted plotted axes are coordinate axes, not trajectories through a wormhole.
 - Near a null interval numerical cancellation can cause rounding; compare with a scale-relative tolerance. Both Python and JS engines have independent tests.
+
+### Chronology quotient / postselection tests (v0.3)
+- The identification (ct,x)~(ct+n Δct,x+n Δx) is imposed, not produced by local GR dynamics. Timelike identification produces a CTC in the quotient *by definition*. This is not empirical support for backward time travel.
+- The quotient coordinates ct and x are measured in light-seconds. For a timelike generator, sqrt((Δct)²-(Δx)²) is proper time per turn in seconds. Null and spacelike generators do not define timelike proper time per turn.
+- The Bell CNOT toy is an ordinary postselected quantum circuit model with effective Kraus operator |0><0| and success probability equal to input P(0). The result is conditional on successful postselection; zero-success events have no conditional output. Expected accepted/discarded counts are not physical measurements.
+- The constraint matrix under research/ctc-constraints.json carries references, explicit physical obstacles, and statuses. Its integrity is checked by Python unit tests.
