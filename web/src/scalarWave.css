@@ -1,0 +1,40 @@
+/* PhiChronos v0.8 3+1D scalar test-field modes */
+.sw-lab{margin-top:17px;background:#0d1929;border:1px solid #2f4759;border-radius:10px;padding:26px}
+.sw-kicker{display:flex;align-items:center;gap:9px;color:#91e5d6;font:10px 'DM Mono',monospace;letter-spacing:1px}
+.sw-lab h3{font:600 clamp(24px,3vw,36px) 'Space Grotesk',sans-serif;margin:16px 0 10px;letter-spacing:-.8px}
+.sw-intro{color:#a9bdc9;font-size:12px;line-height:1.75;max-width:800px;margin-bottom:24px}
+.sw-grid{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:16px}
+.sw-controls,.sw-results{background:#0b1727;border:1px solid #304656;border-radius:8px;padding:19px;min-width:0}
+.sw-controls label{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:#a5bbc9;font-size:12px;margin:19px 0 10px}
+.sw-controls label:first-child{margin-top:0}.sw-controls label b{color:#a3eee0;font:12px 'DM Mono',monospace}
+.sw-controls input[type=range]{width:100%;accent-color:#8de8d8}
+.sw-equation{padding:18px;background:#13293b;border:1px solid #37586b;border-radius:6px;color:#dbf1eb;margin:24px 0 17px;font:13px/1.8 'DM Mono',monospace}
+.sw-equation small{display:block;color:#8ee7d5;font:9px 'DM Mono',monospace;letter-spacing:.8px;margin:15px 0 5px}
+.sw-equation small:first-child{margin-top:0}
+.sw-info{display:flex;gap:10px;color:#8bdcce}.sw-info svg{flex-shrink:0;margin-top:3px}
+.sw-info p{font-size:11px;line-height:1.8;color:#91abbb;margin:0}
+.sw-status{background:#252b3a;border:1px solid #655771;border-radius:7px;padding:16px;display:flex;gap:12px;color:#c1bedc}
+.sw-status svg{flex-shrink:0}.sw-status strong{color:#ebe3fe;font-size:14px}
+.sw-status p{font-size:11px;line-height:1.7;color:#acbed0;margin:7px 0 0}
+.sw-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:15px 0}
+.sw-stat{background:#12273a;border:1px solid #315064;border-radius:6px;padding:15px;min-width:0}
+.sw-stat>span{display:block;font:9px 'DM Mono',monospace;color:#89aaba;letter-spacing:.4px}
+.sw-stat strong{font:600 clamp(16px,1.8vw,21px) 'Space Grotesk',sans-serif;display:block;color:#c7f1e6;margin:11px 0 7px;overflow-wrap:anywhere}
+.sw-stat small{font-size:10px;color:#7e9daf}
+.sw-chart{background:#0d1c2c;border:1px solid #2c4658;border-radius:7px;padding:13px;margin-top:12px}
+.sw-chart-header{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.sw-chart-header strong{font-size:12px}.sw-chart-header span{font:10px 'DM Mono',monospace;color:#88a5b7}
+.sw-chart svg{display:block;width:100%;max-width:780px;margin:auto}
+.sw-chart p{font-size:10px;line-height:1.7;color:#86a1b4;margin:4px 0 0}
+.sw-legend{display:flex;flex-wrap:wrap;gap:16px;margin:7px 0}
+.sw-legend span{font-size:10px;color:#aabcc5;display:flex;align-items:center;gap:6px}
+.sw-legend i{height:4px;width:13px;border-radius:5px}
+.sw-crosscheck,.sw-convergence{background:#12283c;border:1px solid #304d60;border-radius:7px;padding:15px;margin-top:14px}
+.sw-crosscheck{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.sw-crosscheck strong{font-size:12px;color:#d3e9e5}.sw-crosscheck p,.sw-convergence p{font-size:11px;line-height:1.75;color:#a0b7c7;margin:7px 0 0}
+.sw-crosscheck span{font:11px 'DM Mono',monospace;color:#9fe8d9}
+.sw-convergence button{border:1px solid #467d77;border-radius:5px;color:#bbf6ea;background:#1c4643;padding:9px 12px;font-size:11px}
+.sw-footer{display:flex;align-items:center;flex-wrap:wrap;gap:17px;border-top:1px solid #2a4555;margin-top:18px;padding-top:17px;color:#8bdfcf}
+.sw-footer a{display:flex;align-items:center;gap:5px;color:#a1e7d9;font-size:11px}
+@media(max-width:1000px){.sw-grid{grid-template-columns:1fr}}
+@media(max-width:570px){.sw-lab{padding:16px}.sw-controls,.sw-results{padding:14px}.sw-stats{grid-template-columns:1fr}.sw-kicker{line-height:1.5}}
