@@ -7,6 +7,8 @@ from .chronology import quotient_analysis, winding_history
 from .postselection import postselected_cnot
 from .wormhole import evaluate_wormhole, areal_radius_m, stress_from_shape, stress_from_proper_radial
 from .qei import flat_qei_bounds, sampled_toy_pulse, wormhole_domain_audit
+from .qei_compact import compact_flat_qei, compact_plateau_trial, compact_sampler_density
+from .curvature import curvature_audit
 __all__ = [
     "lorentz_factor", "proper_time_years", "kinetic_energy_joules",
     "schwarzschild_clock_rate", "altitude_time_gain_ns_per_day",
@@ -15,4 +17,5 @@ __all__ = [
     "quotient_analysis", "winding_history", "postselected_cnot",
     "evaluate_wormhole", "areal_radius_m", "stress_from_shape", "stress_from_proper_radial",
     "flat_qei_bounds", "sampled_toy_pulse", "wormhole_domain_audit",
+    "compact_flat_qei", "compact_plateau_trial", "compact_sampler_density", "curvature_audit",
 ]

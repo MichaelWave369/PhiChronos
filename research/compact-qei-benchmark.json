@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "QEI-006-FINITE-SUPPORT",
+  "status": "published flat-space scalar-field lower bound; computed numerical bump coefficient",
+  "primary_formula": "Fewster–Eveson 1998 Eq. 5.5: average g² * <T00> >= -hbar/(16*pi²*c³) * integral |g''|²",
+  "field": "free real massless minimally coupled scalar in 4D Minkowski",
+  "observer": "inertial worldline",
+  "renormalization": "Minkowski vacuum normal ordering",
+  "sampling": "g_tau(t) = b(t/tau)/sqrt(tau*I0); b(u) = exp(-1/(1-u²)) for |u|<1 and zero outside",
+  "support": "t in [-tau, tau], smooth C-infinity at boundaries",
+  "normalization_integral": 0.1330861208449943,
+  "second_derivative_integral": 10.83426781139888,
+  "dimensionless_coefficient": 81.40794654325808,
+  "numerical_method": "Simpson 4096, independent midpoint 16384 with close agreement",
+  "curved_metric_qei_claimed": false,
+  "quantum_state_constructed": false,
+  "backreaction_evaluated": false,
+  "references": {
+    "original_paper": "Fewster & Eveson (1998) https://arxiv.org/pdf/gr-qc/9805024",
+    "curved_general_theorem": "Fewster & Smith (2008) https://arxiv.org/abs/gr-qc/0702056",
+    "prior_wormhole_model": "https://doi.org/10.1119/1.15620"
+  },
+  "warnings": [
+    "Finite time support does not establish flat QEI validity on a curved wormhole",
+    "A small time/curvature ratio is only a heuristic diagnostic",
+    "A toy negative plateau is not a renormalized stress tensor of an admissible quantum state"
+  ]
+}

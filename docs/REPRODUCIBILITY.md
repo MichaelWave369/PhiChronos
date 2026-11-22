@@ -42,3 +42,8 @@ Independent replication comes before striking headlines. A quantum simulation of
 - Published 3/(32pi²) and 27/(2048pi²) bounds for a Lorentzian-sampled free massless 4D Minkowski scalar field; FE/FR ratio 9/64.
 - Independent analytic and Simpson-integrated toy pulse sampling with clear non-physical-profile flag.
 - Curved wormhole comparison is prohibited by a domain gate until quantum field states, curved theorem and backreaction are modeled.
+
+### v0.6 finite-window QEI
+- Genuine C-infinity compact bump normalized by Simpson-integrated I0; its second derivative integral I2 independently midpoint-checked. Ratio I2/I0=81.40794654325808.
+- Fewster–Eveson Eq. 5.5 gives flat free scalar bound; its finite support does not allow transfer to a curved Morris–Thorne throat. Quantum state, Hadamard renormalization, and backreaction remain unevaluated.
+- Independently check sectional components R_ltheta=-r0²/r⁴, R_thetaphi=+r0²/r⁴; derive Ricci=-2r0²/r⁴, Kretschmann=12r0⁴/r⁸. The scale comparison c*tau/L is a diagnostic, never a curved QEI verdict.

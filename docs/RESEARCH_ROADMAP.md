@@ -1,4 +1,4 @@
-# Research roadmap | version 0.5
+# Research roadmap | version 0.6
 
 ## The guiding question
 
@@ -43,6 +43,10 @@ Which time effects have been measured, which are extrapolations within accepted 
 - Separate 'exists in a mathematical metric' from 'could be created in our universe.'
 
 **Exit criteria:** a constraint matrix with arguments both for and against physical realizability.
+
+## v0.6 - Finite-duration quantum sampling and curvature diagnostics
+
+Implemented a C-infinity compactly supported 4D Minkowski sampler with finite time support, numerical reproduction of Fewster–Eveson Eq. 5.5, and independent quadrature and derivative checks. In the v0.4 ultrastatic wormhole, added orthonormal sectional curvatures, Ricci scalar, Kretschmann scalar and a bounded curvature-length diagnostic. **Not** a curved-spacetime QEI derivation, quantum state source, or backreaction solution. The original issue CTC-005 remains open for those research problems.
 
 ## v0.5 - Quantum energy inequality domain baseline
 

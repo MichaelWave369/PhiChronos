@@ -12,6 +12,8 @@ from .chronology import quotient_analysis, winding_history
 from .postselection import postselected_cnot
 from .wormhole import evaluate_wormhole
 from .qei import flat_qei_bounds, sampled_toy_pulse, wormhole_domain_audit
+from .qei_compact import compact_flat_qei, compact_plateau_trial
+from .curvature import curvature_audit
 
 
 def main() -> None:
@@ -48,6 +50,13 @@ def main() -> None:
     audit.add_argument("--tau-s", type=float, required=True)
     audit.add_argument("--throat-m", type=float, required=True)
     audit.add_argument("--ratio", type=float, default=1)
+    comp = sub.add_parser("qei-compact", help="finite-support Minkowski free-scalar QEI; not a wormhole theorem")
+    comp.add_argument("--tau-s", type=float, required=True)
+    comp.add_argument("--plateau-amplitude-j-m3", type=float, default=None)
+    curv = sub.add_parser("curvature-audit", help="orthonormal curvature invariants; no QEI compliance verdict")
+    curv.add_argument("--throat-m", type=float, required=True)
+    curv.add_argument("--ratio", type=float, default=1.0)
+    curv.add_argument("--tau-s", type=float, required=True)
     args = parser.parse_args()
 
     try:
@@ -71,6 +80,11 @@ def main() -> None:
         elif args.model == "qei":
             result = flat_qei_bounds(args.tau_s) if args.pulse_amplitude_j_m3 is None else sampled_toy_pulse(
                 args.pulse_amplitude_j_m3, args.pulse_width_s, args.tau_s)
+        elif args.model == "qei-compact":
+            result = (compact_flat_qei(args.tau_s) if args.plateau_amplitude_j_m3 is None
+                      else compact_plateau_trial(args.plateau_amplitude_j_m3,args.tau_s))
+        elif args.model == "curvature-audit":
+            result = curvature_audit(args.throat_m,args.ratio,args.tau_s)
         elif args.model == "qei-audit":
             result = wormhole_domain_audit(args.throat_m, args.ratio, args.tau_s)
         elif args.model == "wormhole":

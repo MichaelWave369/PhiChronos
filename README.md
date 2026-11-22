@@ -6,7 +6,7 @@
 
 PhiChronos separates **measured effects**, **validated mathematical models**, and **unverified hypotheses**. The project does **not** claim that backward time travel is possible, or that simulating a closed timelike curve physically sends information to the past.
 
-## What's working in v0.5
+## What's working in v0.6
 
 - **Relativity engine (Python stdlib):** Lorentz factor, elapsed proper time, relativistic kinetic energy, stationary Schwarzschild clock comparison, and local weak-field altitude comparison.
 - **Causality tools:** classify timelike, lightlike, and spacelike separations in flat 1+1-dimensional spacetime.
@@ -16,6 +16,7 @@ PhiChronos separates **measured effects**, **validated mathematical models**, an
 - **Postselected Bell CNOT toy:** exact outcome probability, expected accepted/discarded shots, and explicit handling of zero-probability postselection.
 - **Morris–Thorne wormhole constraints v0.4:** independent classical Einstein-tensor cross-checks for Phi=0, b(r)=r0²/r; radial NEC and local SI stress estimates; explicit QEI caveats.
 - **Field-specific QEI v0.5:** Ford–Roman and Fewster–Eveson flat scalar bounds, analytic and numerical Lorentzian averaging, and a categorical audit refusing unjustified transfer to the curved wormhole.
+- **Finite-support QEI v0.6:** a genuine C-infinity bump sampler on [-tau,tau], Eq. 5.5 from Fewster–Eveson, independent quadrature, quantum-state caveats and orthonormal wormhole curvature invariants.
 - **Cited CTC constraint matrix:** Gödel, Kerr, Tipler, wormholes, Hawking chronology protection, and Minkowski quotient, with limitations and evidence status.
 - **Unit tests and GitHub Actions CI** for boundaries and reference values.
 - **React research dashboard** with live forward-time-travel and altitude clock simulations; source links and epistemic status labels.
@@ -38,6 +39,8 @@ Try the CLI:
     PYTHONPATH=src python -m phichronos.cli wormhole --throat-m 1 --ratio 1
     PYTHONPATH=src python -m phichronos.cli qei --tau-s 1e-15
     PYTHONPATH=src python -m phichronos.cli qei-audit --tau-s 1e-15 --throat-m 1
+    PYTHONPATH=src python -m phichronos.cli qei-compact --tau-s 1e-15
+    PYTHONPATH=src python -m phichronos.cli curvature-audit --tau-s 1e-15 --throat-m 1
 
 For the browser dashboard:
 
@@ -56,9 +59,12 @@ Live site: https://michaelwave369.github.io/PhiChronos/
 4. Postselected CTC quantum circuit experiments emulate a mathematical model, **not physical travel into the past**.
 5. All claims must have a source, uncertainty/assumptions, reproducibility instructions, and a proposed falsification route.
 
-Read [Field-specific QEI model](docs/QEI_MODEL.md), [Wormhole model and constraints](docs/WORMHOLE_MODEL.md), [Chronology model](docs/CHRONOLOGY_MODEL.md), [Lorentz model methodology](docs/LORENTZ_MODEL.md), [Research Roadmap](docs/RESEARCH_ROADMAP.md), [Reproducibility](docs/REPRODUCIBILITY.md), and [Safety and Scope](docs/SAFETY_AND_SCOPE.md).
+Read [Finite-support QEI and curvature diagnostics](docs/FINITE_SUPPORT_QEI.md), [Field-specific QEI model](docs/QEI_MODEL.md), [Wormhole model and constraints](docs/WORMHOLE_MODEL.md), [Chronology model](docs/CHRONOLOGY_MODEL.md), [Lorentz model methodology](docs/LORENTZ_MODEL.md), [Research Roadmap](docs/RESEARCH_ROADMAP.md), [Reproducibility](docs/REPRODUCIBILITY.md), and [Safety and Scope](docs/SAFETY_AND_SCOPE.md).
 
 ## Sources to begin
+
+- Fewster and Eveson, [Finite-duration smooth sampling, Eq. 5.5 (1998)](https://arxiv.org/pdf/gr-qc/9805024)
+- Fewster and Smith, [Absolute quantum energy inequalities in curved spacetime (2008)](https://arxiv.org/abs/gr-qc/0702056)
 
 - Fewster and Eveson, [Stronger Lorentzian sampled energy bound (1998)](https://doi.org/10.1103/PhysRevD.58.084010)
 
