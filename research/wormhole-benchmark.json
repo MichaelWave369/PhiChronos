@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "MT-ELLIS-0.4",
+  "classification": "derived classical GR model; not experimental evidence",
+  "metric": "ds²=-c²dt²+dr²/(1-b(r)/r)+r²dΩ², Phi=0, b(r)=r0²/r",
+  "signature": "(-,+,+,+)",
+  "domain": "r>=r0>0; two asymptotically flat sides; proper l∈R; code r0∈[0.001,1e9] m, 1<=r/r0<=1000",
+  "primary_source": "https://doi.org/10.1119/1.15620",
+  "supporting_sources": [
+    "https://doi.org/10.1103/PhysRevLett.61.1446",
+    "https://doi.org/10.1103/PhysRevD.53.5496",
+    "https://doi.org/10.3390/universe10070291"
+  ],
+  "derivation": [
+    "b(r0)=r0, b'(r0)=-1<1; redshift Phi(r)=0, no horizon from lapse",
+    "Einstein orthonormal components: epsilon=(c4/8piG)b'/r²; p_r=-(c4/8piG)b/r³; p_t=(c4/8piG)(b-rb')/(2r³)",
+    "Independent proper radial R(l)=sqrt(l²+r0²): G_(tt)=(1-R'²-2RR'')/R², G_(ll)=(R'²-1)/R², G_(theta theta)=R''/R",
+    "For b=r0²/r: epsilon=p_r=-c4*r0²/(8pi G r4); p_t=+c4*r0²/(8pi G r4), epsilon+p_r<0, epsilon+p_t=0",
+    "Ricci scalar R=-2r0²/r4, locally finite at throat; model does not check global stability"
+  ],
+  "benchmarks": {
+    "throat_m": 1,
+    "radius_over_throat": 1,
+    "energy_density_j_m3": -4.815453886722423e+42,
+    "radial_pressure_pa": -4.815453886722423e+42,
+    "tangential_pressure_pa": 4.815453886722423e+42,
+    "radial_nec_j_m3": -9.630907773444846e+42
+  },
+  "validation": [
+    "domain, signature, throat and flare-out unit tests",
+    "shape derivative vs central finite differences",
+    "Einstein orthonormal stress equations in shape and proper radial coordinates",
+    "anisotropic stress conservation via numerical pressure derivative",
+    "radial NEC and tangential NEC sign tests",
+    "r0^-2 and (r/r0)^-4 scale tests",
+    "independent JavaScript implementation and Node tests"
+  ],
+  "limitations": "Chosen curve and supporting stress-energy are postulated within classical general relativity. They are not an observed wormhole, do not demonstrate material capable of sourcing this stress, and do not establish stability, traversability under perturbations, quantum energy inequality compatibility or backwards time travel. No claim of a general quantum energy inequality bound follows from a local energy density."
+}

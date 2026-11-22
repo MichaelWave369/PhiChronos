@@ -10,6 +10,7 @@ from .causality import classify_interval, proper_time_seconds
 from .boost import lorentz_boost, minkowski_interval_m2, causal_region
 from .chronology import quotient_analysis, winding_history
 from .postselection import postselected_cnot
+from .wormhole import evaluate_wormhole
 
 
 def main() -> None:
@@ -35,6 +36,9 @@ def main() -> None:
     p = sub.add_parser("postselect", help="Bell-pair CNOT postselection toy, NOT real backward travel")
     p.add_argument("--prob-zero", type=float, required=True)
     p.add_argument("--shots", type=int, default=1000)
+    w = sub.add_parser("wormhole", help="static Morris–Thorne classical stress model, NOT an engineering method")
+    w.add_argument("--throat-m", type=float, required=True)
+    w.add_argument("--ratio", type=float, default=1.0, help="areal radius divided by throat radius")
     args = parser.parse_args()
 
     try:
@@ -55,6 +59,8 @@ def main() -> None:
         elif args.model == "quotient":
             result = quotient_analysis(args.delta_ct, args.delta_x)
             result["winding_history"] = winding_history(args.delta_ct, args.delta_x, args.turns)
+        elif args.model == "wormhole":
+            result = evaluate_wormhole(args.throat_m, args.ratio)
         elif args.model == "postselect":
             result = postselected_cnot(args.prob_zero, args.shots)
         elif args.model == "boost":

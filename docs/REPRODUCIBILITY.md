@@ -31,3 +31,9 @@ Independent replication comes before striking headlines. A quantum simulation of
 - The quotient coordinates ct and x are measured in light-seconds. For a timelike generator, sqrt((Δct)²-(Δx)²) is proper time per turn in seconds. Null and spacelike generators do not define timelike proper time per turn.
 - The Bell CNOT toy is an ordinary postselected quantum circuit model with effective Kraus operator |0><0| and success probability equal to input P(0). The result is conditional on successful postselection; zero-success events have no conditional output. Expected accepted/discarded counts are not physical measurements.
 - The constraint matrix under research/ctc-constraints.json carries references, explicit physical obstacles, and statuses. Its integrity is checked by Python unit tests.
+
+### Wormhole metric benchmark (v0.4)
+- Selected explicit static metric: Phi=0, b(r)=r0²/r, r>=r0, two asymptotic ends. Coordinate r is degenerate at the throat, while l∈R with r(l)=sqrt(l²+r0²) is regular.
+- Classical Einstein equations are evaluated in an orthonormal frame; stress components in J/m³ / Pa. A negative radial NEC is model-required classical stress, NOT proof that any quantum field can support it.
+- Independent shape-coordinate and proper-radial calculations, finite-difference shape derivative, and stress conservation are checked numerically.
+- No general QEI or backreaction bound has been computed; model is not empirically verified.

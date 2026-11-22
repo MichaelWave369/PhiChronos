@@ -1,4 +1,4 @@
-# Research roadmap | version 0.3
+# Research roadmap | version 0.4
 
 ## The guiding question
 
@@ -31,7 +31,9 @@ Which time effects have been measured, which are extrapolations within accepted 
 
 **Exit criteria:** every result states the metric and demonstrates equations, not just a plotted trajectory.
 
-## Phase 3 — Candidate CTC models (v0.3 research scaffold, NOT proven feasibility)
+## Phase 3 — Candidate CTC models (v0.4 quantitative stress benchmark)
+
+**v0.4 addition:** Implemented the Phi=0, b(r)=r0²/r static Morris–Thorne throat and a classical Einstein-equation stress/NEC calculation in SI, using independent shape-coordinate and proper-radial derivations. This is not a quantum viability demonstration. A local stress profile alone does not prove stability or constructibility.
 
 **Implemented:** A sourced constraint ledger of six approaches/obstructions; a testable flat 1+1D cyclic quotient that illustrates a CTC only if timelike identification is imposed. **Not done:** deriving a dynamically formed physical time machine, energy-inequality solutions, global stability proofs.
 
