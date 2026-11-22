@@ -1,0 +1,17 @@
+[project]
+name = "phichronos"
+version = "0.1.0"
+description = "Reproducible time dilation and causality research tools"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "PHI369 Labs"}]
+
+[project.scripts]
+phichronos = "phichronos.cli:main"
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

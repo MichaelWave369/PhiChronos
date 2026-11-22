@@ -1,0 +1,7 @@
+id,claim,classification,source_url,verification,limitation,next_test
+E001,Moving clocks experience special relativistic time dilation,experimental,https://www.nist.gov/publications/relativity-and-optical-clocks,primary institutional publication,No engineering pathway to near-light travel,Independent numeric replication
+E002,Clock rates differ under gravitational potential,experimental,https://www.nist.gov/news-events/news/2022/02/jila-atomic-clocks-measure-einsteins-general-relativity-millimeter-scale,NIST experimental report,Static weak-field model and actual clock conditions differ,Compare published measurement ranges
+E003,General relativity admits model spacetimes containing closed timelike curves,theoretical,https://doi.org/10.3390/universe7010012,reviewed literature survey,Mathematical solution is not demonstrated physical realization,Map assumptions and energy conditions
+E004,Postselected quantum circuits simulate closed timelike curve models,experimental-model-simulation,https://doi.org/10.1103/tm83-sxpm,peer-reviewed 2026 experiment,Does not send information to the actual past,Reproduce toy postselection numerically
+E005,Communication capacity may be defined for hypothetical retrocausal quantum channels,theoretical,https://doi.org/10.1103/znyd-npk5,peer-reviewed 2026 theory,Assumes hypothetical channel and does not demonstrate a physical one,Write a clean mathematical model
+E006,Human backward time travel is physically achievable,unverified,,,,No known observation or engineering demonstration,Seek falsifiable conditions rather than affirm
