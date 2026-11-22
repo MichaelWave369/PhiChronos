@@ -8,7 +8,7 @@ test('throat, flare-out, regular proper radial coordinate',()=>{
     const a=wormholeAt(r0)
     near(a.b,r0)
     assert.equal(a.bp,-1)
-    assert.equal(a.gRadialInverse,0)
+    assert.ok(Math.abs(a.gRadialInverse) <= 1e-14) // roundoff at the throat
     assert.equal(a.lapseSquared,1)
     near(arealRadius(r0,0),r0)
     near(arealRadius(r0,3*r0),Math.sqrt(10)*r0)
@@ -21,7 +21,7 @@ test('stress energy and NEC identities',()=>{
     near(a.energyDensity, a.radialPressure)
     near(a.energyDensity,-a.tangentialPressure)
     near(a.radialNEC,2*a.energyDensity)
-    near(a.tangentialNEC,0)
+    assert.ok(Math.abs(a.tangentialNEC) <= 1e-12*Math.abs(a.energyDensity)) // cancellation tolerance
     near(a.ricciScalar,-2/q**4)
   }
 })
