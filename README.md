@@ -6,7 +6,7 @@
 
 PhiChronos separates **measured effects**, **validated mathematical models**, and **unverified hypotheses**. The project does **not** claim that backward time travel is possible, or that simulating a closed timelike curve physically sends information to the past.
 
-## What's working in v0.8
+## What's working in v0.9
 
 - **Relativity engine (Python stdlib):** Lorentz factor, elapsed proper time, relativistic kinetic energy, stationary Schwarzschild clock comparison, and local weak-field altitude comparison.
 - **Causality tools:** classify timelike, lightlike, and spacelike separations in flat 1+1-dimensional spacetime.
@@ -19,6 +19,7 @@ PhiChronos separates **measured effects**, **validated mathematical models**, an
 - **Finite-support QEI v0.6:** a genuine C-infinity bump sampler on [-tau,tau], Eq. 5.5 from Fewster–Eveson, independent quadrature, quantum-state caveats and orthonormal wormhole curvature invariants.
 - **Actual curved QEI v0.7:** Reproduces Flanagan's 2002 (corrected v4 2020) two-dimensional curved-spacetime inequality with a geodesic observer, exact curvature term, independent sampling quadrature, and strong dimensional guard: J/m ≠ 4D J/m³.
 - **Four-dimensional scalar-wave modes v0.8:** derive the massless minimally coupled Klein–Gordon radial potential on the fixed Ellis throat; numerical s-wave two-ended scattering, analytic low-k paper cross-check, independent square-barrier calibration and flux conservation. **Not** a QEI or stability proof.
+- **4D quantum-field reference v0.9:** exact massless Minkowski positive-frequency Wightman distribution with regulated numeric spectral integral; complex two-ended Ellis s-wave scattering amplitudes, flux/phase/KG convention tests. **No curved Ellis Hadamard state**, stress tensor, or 4D QEI yet.
 - **Cited CTC constraint matrix:** Gödel, Kerr, Tipler, wormholes, Hawking chronology protection, and Minkowski quotient, with limitations and evidence status.
 - **Unit tests and GitHub Actions CI** for boundaries and reference values.
 - **React research dashboard** with live forward-time-travel and altitude clock simulations; source links and epistemic status labels.
@@ -45,6 +46,8 @@ Try the CLI:
     PYTHONPATH=src python -m phichronos.cli curvature-audit --tau-s 1e-15 --throat-m 1
     PYTHONPATH=src python -m phichronos.cli qei-curved2d --alpha 0.5 --length-m 1000000 --tau-s 0.01
     PYTHONPATH=src python -m phichronos.cli scalar-wave --throat-m 1 --kappa 0.5
+    PYTHONPATH=src python -m phichronos.cli wightman-flat4d --delta-ct-m 0.3 --separation-m 0.7 --epsilon-m 0.5
+    PYTHONPATH=src python -m phichronos.cli ellis-mode --throat-m 1 --kappa 0.5
 
 For the browser dashboard:
 
@@ -63,9 +66,12 @@ Live site: https://michaelwave369.github.io/PhiChronos/
 4. Postselected CTC quantum circuit experiments emulate a mathematical model, **not physical travel into the past**.
 5. All claims must have a source, uncertainty/assumptions, reproducibility instructions, and a proposed falsification route.
 
-Read [Four-dimensional scalar-wave modes](docs/SCALAR_MODES_4D.md), [Actual 1+1D curved QEI benchmark](docs/QEI_CURVED_2D.md), [Finite-support QEI and curvature diagnostics](docs/FINITE_SUPPORT_QEI.md), [Field-specific QEI model](docs/QEI_MODEL.md), [Wormhole model and constraints](docs/WORMHOLE_MODEL.md), [Chronology model](docs/CHRONOLOGY_MODEL.md), [Lorentz model methodology](docs/LORENTZ_MODEL.md), [Research Roadmap](docs/RESEARCH_ROADMAP.md), [Reproducibility](docs/REPRODUCIBILITY.md), and [Safety and Scope](docs/SAFETY_AND_SCOPE.md).
+Read [Four-dimensional Wightman reference and mode-normalization caveats](docs/QUANTUM_STATE_REFERENCE_4D.md), [Four-dimensional scalar-wave modes](docs/SCALAR_MODES_4D.md), [Actual 1+1D curved QEI benchmark](docs/QEI_CURVED_2D.md), [Finite-support QEI and curvature diagnostics](docs/FINITE_SUPPORT_QEI.md), [Field-specific QEI model](docs/QEI_MODEL.md), [Wormhole model and constraints](docs/WORMHOLE_MODEL.md), [Chronology model](docs/CHRONOLOGY_MODEL.md), [Lorentz model methodology](docs/LORENTZ_MODEL.md), [Research Roadmap](docs/RESEARCH_ROADMAP.md), [Reproducibility](docs/REPRODUCIBILITY.md), and [Safety and Scope](docs/SAFETY_AND_SCOPE.md).
 
 ## Sources to begin
+
+- [4D massless Minkowski vacuum Wightman/positive-frequency reference](https://qft.org/curved-spacetime/hadamard-short-distance/)
+- [Fewster–Smith 4D curved absolute QEI (2008)](https://doi.org/10.1007/s00023-008-0361-0)
 
 - [Transmission of low-energy scalar waves through a traversable wormhole (2020)](https://doi.org/10.1140/epjc/s10052-020-08668-3)
 - [Scalar waves in a wormhole geometry (1994)](https://doi.org/10.1103/PhysRevD.49.853)

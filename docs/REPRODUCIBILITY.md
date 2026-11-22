@@ -58,3 +58,9 @@ Independent replication comes before striking headlines. A quantum simulation of
 - S-wave reflection/transmission from real transfer-matrix RK4 in x=l/r0 with explicit truncated domain and steps. Wronskian residual det(M)-1 and flux residual T+R-1 retained.
 - Cross-check the paper's low-k limit T_power/kappa² -> 4/pi² and an entirely separate constant square barrier with exact elementary transmission formula. Compare domain extent and r0 rescaling.
 - No 4D curved Hadamard QEI, state, renormalized stress or backreaction calculation.
+
+### v0.9 quantum-field reference and asymptotic mode phases
+- 4D Minkowski free massless scalar Wightman regularized by exp(-epsilon*k) and implemented analytically and via independent positive-k spectral Simpson quadrature. Output natural units (hbar=c=1), m^-2, with exact cutoff tail bound, not a renormalized stress.
+- Independent flat tests include Hermiticity, positive-type Gram matrix, and epsilon^-2 UV coincidence scaling.
+- Ellis s-wave scattering channel complex t/r from real RK4 transfer; check matching, parity, flux conservation, formal delta(kappa) KG coefficient N=1/sqrt(4*pi*kappa), and independent empty-barrier phase. A scattering channel is not a full complete quantum state.
+- Uncomputed: global all-ell mode sum, Hadamard singular structure on Ellis, stress renormalization, absolute 4D curved QEI, and semiclassical backreaction.

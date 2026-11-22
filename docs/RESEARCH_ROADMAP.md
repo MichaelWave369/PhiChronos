@@ -1,4 +1,4 @@
-# Research roadmap | version 0.8
+# Research roadmap | version 0.9
 
 ## The guiding question
 
@@ -43,6 +43,10 @@ Which time effects have been measured, which are extrapolations within accepted 
 - Separate 'exists in a mathematical metric' from 'could be created in our universe.'
 
 **Exit criteria:** a constraint matrix with arguments both for and against physical realizability.
+
+## v0.9 - 4D Minkowski quantum-field reference and partial Ellis scattering mode normalization
+
+Completed an **actual Minkowski positive-frequency Wightman** analytic-vs-spectral reference in 3+1D, with regulator/cutoff errors, complex-conjugate time reversal, positive-type checks and UV short-distance scaling. On Ellis, compute asymptotic two-ended *classical* s-wave scattering amplitudes and a **formal** Klein–Gordon delta(kappa) normalization factor; verify phase/flux/parity and comparison against the v0.8 power solver. The curved Hadamard two-point function, all angular modes, state selection, renormalized stress and 4D curved QEI remain **NOT CONSTRUCTED**. See docs/QUANTUM_STATE_REFERENCE_4D.md and issue #7.
 
 ## v0.8 - True 4D fixed-background scalar wave operator and scattering
 

@@ -16,6 +16,7 @@ from .qei_compact import compact_flat_qei, compact_plateau_trial
 from .curvature import curvature_audit
 from .qei_curved2d import curved_2d_bound, curved_2d_trial
 from .scalar_modes import s_wave_scattering
+from .quantum_reference import minkowski_spectral_quadrature, ellis_s_wave_channel
 
 
 def main() -> None:
@@ -69,6 +70,17 @@ def main() -> None:
     sw.add_argument("--kappa",type=float,required=True,help="dimensionless frequency omega*r0/c")
     sw.add_argument("--extent",type=float,default=32,help="numerical half-domain in throat units")
     sw.add_argument("--steps",type=int,default=4096)
+    wm=sub.add_parser("wightman-flat4d",help="analytic vs positive-frequency spectral Minkowski vacuum, NOT Ellis state")
+    wm.add_argument("--delta-ct-m",type=float,default=0.3)
+    wm.add_argument("--separation-m",type=float,default=0.7)
+    wm.add_argument("--epsilon-m",type=float,default=0.5)
+    wm.add_argument("--k-cutoff-per-m",type=float,default=96)
+    wm.add_argument("--steps",type=int,default=4096)
+    qm=sub.add_parser("ellis-mode",help="4D curved s-wave complex scattering channel, NOT a Hadamard state")
+    qm.add_argument("--throat-m",type=float,required=True)
+    qm.add_argument("--kappa",type=float,required=True)
+    qm.add_argument("--extent",type=float,default=32)
+    qm.add_argument("--steps",type=int,default=4096)
     args = parser.parse_args()
 
     try:
@@ -92,6 +104,11 @@ def main() -> None:
         elif args.model == "qei":
             result = flat_qei_bounds(args.tau_s) if args.pulse_amplitude_j_m3 is None else sampled_toy_pulse(
                 args.pulse_amplitude_j_m3, args.pulse_width_s, args.tau_s)
+        elif args.model == "wightman-flat4d":
+            result=minkowski_spectral_quadrature(args.delta_ct_m,args.separation_m,
+                         args.epsilon_m,args.k_cutoff_per_m,args.steps)
+        elif args.model == "ellis-mode":
+            result=ellis_s_wave_channel(args.throat_m,args.kappa,args.extent,args.steps)
         elif args.model == "scalar-wave":
             result = s_wave_scattering(args.throat_m,args.kappa,args.extent,args.steps)
         elif args.model == "qei-curved2d":

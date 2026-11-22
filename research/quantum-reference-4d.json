@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "STATE-009-REFERENCE",
+  "status": "flat positive-frequency benchmark plus asymptotic Ellis s-wave channels; NOT an Ellis quantum state",
+  "minkowski_expression": "W_epsilon(delta_ct,r)=1/[4pi²(r²-(delta_ct-i epsilon)²)]",
+  "spectral_representation": "1/(4pi²) integral_0^infinity dk k exp(-epsilon k) exp(-ik delta_ct) sinc(k r), k positive",
+  "quantities": "hbar=c=1; delta_ct=c delta_t, epsilon in m, W in inverse square metres",
+  "cutoff_error_bound": "exp(-epsilon K)*(K/epsilon+1/epsilon²)/(4pi²), based on |sinc|<=1",
+  "scattering_matching": "left e^{ik(x+L)}+r e^{-ik(x+L)}, right t e^{ik(x-L)}; finite-domain plane-wave s-wave matching",
+  "formal_kg_continuum_amplitude": "N(kappa)=(4 pi kappa)^(-1/2) multiplying Y_00*u_kappa(l/r0)/R(l), with delta-kappa normalization if both channels are complete",
+  "two_asymptotic_channels_required": true,
+  "all_partial_waves_complete": false,
+  "ellis_hadamard_state_constructed": false,
+  "curved_wightman_calculated": false,
+  "four_dimensional_curved_qei_computed": false,
+  "renormalized_stress_calculated": false,
+  "backreaction_calculated": false,
+  "sources": {
+    "wightman_reference": "https://qft.org/curved-spacetime/hadamard-short-distance/",
+    "curved_absolute_qei": "https://doi.org/10.1007/s00023-008-0361-0",
+    "fewster_smith_preprint": "https://arxiv.org/abs/gr-qc/0702056",
+    "ellis_scalar_modes": "https://doi.org/10.1140/epjc/s10052-020-08668-3"
+  },
+  "validation": [
+    "analytic vs independent positive-frequency Simpson spectral integral",
+    "UV epsilon^-2 coincidence scaling",
+    "complex-conjugate Wightman time reversal",
+    "positive-type finite epsilon kernel",
+    "complex 2-ended scattering amplitudes vs previous solver",
+    "unitarity and parity channel orthogonality",
+    "formal continuum KG factor",
+    "empty-potential transmitted phase",
+    "strict non-claim booleans"
+  ]
+}
