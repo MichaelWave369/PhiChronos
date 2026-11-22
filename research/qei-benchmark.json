@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "title": "QEI-005 flat scalar Lorentzian sampler",
+  "status": "theoretical published bound; not a wormhole compliance proof",
+  "domain": "3+1D Minkowski, free real massless minimally coupled scalar, inertial observer, vacuum-normal-ordered energy expectation, Lorentzian sampling",
+  "references": {
+    "ford_roman": "https://doi.org/10.1103/PhysRevD.53.5496",
+    "fewster_eveson": "https://doi.org/10.1103/PhysRevD.58.084010",
+    "kontou_review": "https://doi.org/10.3390/universe10070291",
+    "nist_hbar": "https://physics.nist.gov/cgi-bin/cuu/Value?hbar"
+  },
+  "constants": {
+    "c_m_per_s": 299792458,
+    "h_joule_seconds": 6.62607015e-34
+  },
+  "coefficients": {
+    "FR": "3/(32*pi^2)",
+    "FE": "27/(2048*pi^2)",
+    "FE_div_FR": "9/64"
+  },
+  "curved_transfer_proven": false,
+  "backreaction_solved": false,
+  "description": "Pulse trial is a classical function, not a quantum field state. Flat-space theorem is not automatically transferrable to a curved wormhole.",
+  "tests": [
+    "published coefficients",
+    "inverse fourth power",
+    "analytic pulse integral vs independent Simpson quadrature",
+    "guarded units and inputs",
+    "curved-spacetime no-transfer"
+  ]
+}

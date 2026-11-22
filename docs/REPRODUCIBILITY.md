@@ -37,3 +37,8 @@ Independent replication comes before striking headlines. A quantum simulation of
 - Classical Einstein equations are evaluated in an orthonormal frame; stress components in J/m³ / Pa. A negative radial NEC is model-required classical stress, NOT proof that any quantum field can support it.
 - Independent shape-coordinate and proper-radial calculations, finite-difference shape derivative, and stress conservation are checked numerically.
 - No general QEI or backreaction bound has been computed; model is not empirically verified.
+
+### v0.5 free scalar-field QEI
+- Published 3/(32pi²) and 27/(2048pi²) bounds for a Lorentzian-sampled free massless 4D Minkowski scalar field; FE/FR ratio 9/64.
+- Independent analytic and Simpson-integrated toy pulse sampling with clear non-physical-profile flag.
+- Curved wormhole comparison is prohibited by a domain gate until quantum field states, curved theorem and backreaction are modeled.

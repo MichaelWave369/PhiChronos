@@ -1,4 +1,4 @@
-# Research roadmap | version 0.4
+# Research roadmap | version 0.5
 
 ## The guiding question
 
@@ -43,6 +43,10 @@ Which time effects have been measured, which are extrapolations within accepted 
 - Separate 'exists in a mathematical metric' from 'could be created in our universe.'
 
 **Exit criteria:** a constraint matrix with arguments both for and against physical realizability.
+
+## v0.5 - Quantum energy inequality domain baseline
+
+Implemented the Ford–Roman 1996 and Fewster–Eveson 1998 Lorentzian QEI lower bounds for a free 4D Minkowski scalar field, with unit tests, independent Simpson sampling checks and an explicit gate that refuses any unsupported wormhole QEI/backreaction verdict. The field-theory model and wormhole stress-tensor source remain distinct. Curved-spacetime theorems, quantum state sourcing and self-consistent semiclassical backreaction remain open.
 
 ## Phase 4 — Quantum-information model lab (v0.3 P-CTC circuit toy)
 
