@@ -32,7 +32,7 @@ export function curved2dBound(alpha,L,tau){
   validate(alpha,L,tau)
   const ricci=2*alpha*Math.exp(-2*alpha)/(L*L)
   const sampling=-HBAR/(24*Math.PI*C)*FLANAGAN_2D_GRADIENT/tau**2
-  const curvature=-HBAR*C/(24*Math.PI)*ricci
+  const curvature=ricci===0?0:-HBAR*C/(24*Math.PI)*ricci
   return {ricci, sampling, curvature, lower:sampling+curvature,
     dimension:2, units:'J/m', staticCenterGeodesic:true,
     conformalGlobally:true, supportSeconds:2*tau,
