@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react'
-import { ArrowUpRight, Atom, BookOpen, Info, Scale, ShieldAlert } from 'lucide-react'
+import { ArrowUpRight, Atom, BookOpen, FlaskConical, Info, Scale, ShieldAlert } from 'lucide-react'
 import { flatBounds, pulseTrial, curvedGate } from './qei.js'
+import CompactQeiLab from './CompactQeiLab.jsx'
 import './qei.css'
 
 const format = n => n.toExponential(3).replace('e+', ' × 10^').replace('e-', ' × 10^-')
@@ -123,9 +124,9 @@ export default function QeiLab() {
   return <div className="qei-lab">
     <div className="qei-tabs">
       <button className={tab==='flat'?'active':''} onClick={()=>setTab('flat')}><Atom size={16}/> Flat-spacetime QEI</button>
-      <button className={tab==='curved'?'active':''} onClick={()=>setTab('curved')}><Scale size={16}/> Wormhole applicability audit</button>
+      <button className={tab==='curved'?'active':''} onClick={()=>setTab('curved')}><Scale size={16}/> Wormhole applicability audit</button><button className={tab==='compact'?'active':''} onClick={()=>setTab('compact')}><FlaskConical size={16}/> Finite sampling & curvature</button>
     </div>
-    {tab==='flat'?<FlatField/>:<CurvedAudit/>}
+    {tab==='flat'?<FlatField/>:tab==='curved'?<CurvedAudit/>:<CompactQeiLab/>}
     <div className="qei-footer">
       <div><BookOpen size={17}/> Research references: <a href="https://doi.org/10.1103/PhysRevD.53.5496" target="_blank" rel="noreferrer">Ford–Roman 1996 <ArrowUpRight size={13}/></a><a href="https://doi.org/10.1103/PhysRevD.58.084010" target="_blank" rel="noreferrer">Fewster–Eveson 1998 <ArrowUpRight size={13}/></a><a href="https://doi.org/10.3390/universe10070291" target="_blank" rel="noreferrer">Kontou 2024 <ArrowUpRight size={13}/></a></div>
       <p>All visualized inequalities are published mathematical bounds under their stated field assumptions. No past-directed information transfer or physical wormhole has been demonstrated.</p>
