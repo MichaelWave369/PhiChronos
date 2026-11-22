@@ -32,7 +32,7 @@ function ScalingPlot({tau}) {
   const w=720,h=215, pad={l:61,r:20,t:19,b:36}
   const left=-18,right=-12
   const px=x=>pad.l+(x-left)/(right-left)*(w-pad.l-pad.r)
-  const py=y=>h-pad.b-(y+4)/25*(h-pad.t-pad.b)
+  const py=y=>h-pad.b-(y+12)/25*(h-pad.t-pad.b)
   const logBound=t=>Math.log10(Math.abs(compactQei(10**t).lower))
   const path=Array.from({length:120},(_,i)=>{
     const x=left+(right-left)*i/119
@@ -43,7 +43,7 @@ function ScalingPlot({tau}) {
     <svg viewBox={'0 0 '+w+' '+h} role="img" aria-label="Logarithmic plot showing the compact-supported Minkowski scalar lower bound magnitude falling with the inverse fourth power of sampling time.">
       <rect x={pad.l} y={pad.t} width={w-pad.l-pad.r} height={h-pad.t-pad.b} fill="#091a2b" rx="5"/>
       {[-18,-17,-16,-15,-14,-13,-12].map(x=><g key={x}><line x1={px(x)} x2={px(x)} y1={pad.t} y2={h-pad.b} stroke="#2e4559" strokeDasharray="2 6"/><text x={px(x)} y={h-pad.b+17} textAnchor="middle" fontSize="12" fill="#829caf">{x}</text></g>)}
-      {[0,5,10,15,20].map(y=><g key={y}><line x1={pad.l} x2={w-pad.r} y1={py(y)} y2={py(y)} stroke="#2e4559" strokeDasharray="2 6"/><text x={pad.l-9} y={py(y)+4} textAnchor="end" fontSize="11" fill="#829caf">{y}</text></g>)}
+      {[-10,-5,0,5,10].map(y=><g key={y}><line x1={pad.l} x2={w-pad.r} y1={py(y)} y2={py(y)} stroke="#2e4559" strokeDasharray="2 6"/><text x={pad.l-9} y={py(y)+4} textAnchor="end" fontSize="11" fill="#829caf">{y}</text></g>)}
       <path d={path} fill="none" stroke="#8eead9" strokeWidth="3.3"/>
       <line x1={px(Math.log10(tau))} x2={px(Math.log10(tau))} y1={pad.t} y2={h-pad.b} stroke="#e4bd89" strokeDasharray="5 6"/>
       <circle cx={px(Math.log10(tau))} cy={py(Math.log10(Math.abs(compactQei(tau).lower)))} r="5.8" stroke="#0c1b29" strokeWidth="2" fill="#ffb981"/>
