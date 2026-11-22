@@ -6,10 +6,12 @@
 
 PhiChronos separates **measured effects**, **validated mathematical models**, and **unverified hypotheses**. The project does **not** claim that backward time travel is possible, or that simulating a closed timelike curve physically sends information to the past.
 
-## What's working in v0.1
+## What's working in v0.2
 
 - **Relativity engine (Python stdlib):** Lorentz factor, elapsed proper time, relativistic kinetic energy, stationary Schwarzschild clock comparison, and local weak-field altitude comparison.
 - **Causality tools:** classify timelike, lightlike, and spacelike separations in flat 1+1-dimensional spacetime.
+- **Lorentz boost engine:** forward and inverse coordinate transforms, signed Minkowski intervals, causal regions, and tests of interval invariance.
+- **Interactive Minkowski explorer:** two frames, light cones, tilted axes, presets, and transformed coordinates with live observer-velocity controls.
 - **Unit tests and GitHub Actions CI** for boundaries and reference values.
 - **React research dashboard** with live forward-time-travel and altitude clock simulations; source links and epistemic status labels.
 - **Evidence ledger + staged research program** to separate demonstrations, theoretical models, and speculation.
@@ -25,14 +27,16 @@ Try the CLI:
     PYTHONPATH=src python -m phichronos.cli velocity --beta 0.99 --earth-years 7.08881205 --mass-kg 1000
     PYTHONPATH=src python -m phichronos.cli altitude --meters 1
     PYTHONPATH=src python -m phichronos.cli interval --dt-seconds 1 --distance-meters 1000
+    PYTHONPATH=src python -m phichronos.cli boost --beta 0.6 --time-seconds 5 --x-meters 899377374
 
 For the browser dashboard:
 
     cd web
     npm install
     npm run dev
+    npm run test
 
-Live site (after Pages is enabled): https://michaelwave369.github.io/PhiChronos/
+Live site: https://michaelwave369.github.io/PhiChronos/
 
 ## Ground rules
 
@@ -42,9 +46,11 @@ Live site (after Pages is enabled): https://michaelwave369.github.io/PhiChronos/
 4. Postselected CTC quantum circuit experiments emulate a mathematical model, **not physical travel into the past**.
 5. All claims must have a source, uncertainty/assumptions, reproducibility instructions, and a proposed falsification route.
 
-Read [Research Roadmap](docs/RESEARCH_ROADMAP.md), [Reproducibility](docs/REPRODUCIBILITY.md), and [Safety and Scope](docs/SAFETY_AND_SCOPE.md).
+Read [Lorentz model methodology](docs/LORENTZ_MODEL.md), [Research Roadmap](docs/RESEARCH_ROADMAP.md), [Reproducibility](docs/REPRODUCIBILITY.md), and [Safety and Scope](docs/SAFETY_AND_SCOPE.md).
 
 ## Sources to begin
+
+- OpenStax, [The Lorentz Transformation](https://openstax.org/books/university-physics-volume-3/pages/5-5-the-lorentz-transformation)
 
 - NIST, [Putting Einstein to the Test](https://www.nist.gov/atomic-clocks/a-powerful-tool-for-science/putting-einstein-test)
 - NIST, [Relativity and Optical Clocks (2010)](https://www.nist.gov/publications/relativity-and-optical-clocks)

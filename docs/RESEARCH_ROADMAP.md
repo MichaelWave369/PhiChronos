@@ -1,4 +1,4 @@
-# Research roadmap | version 0.1
+# Research roadmap | version 0.2
 
 ## The guiding question
 
@@ -20,7 +20,9 @@ Which time effects have been measured, which are extrapolations within accepted 
 
 **Exit criteria:** tests pass, result units are documented, and independent references support values.
 
-## Phase 2 — Causality and geometry
+## Phase 2 — Causality and geometry (v0.2 Minkowski explorer live)
+
+**Completed:** 1+1D Lorentz boosts, interval invariance tests, causal region classification, interactive light cones and primed-frame coordinates. **Still open:** accelerating worldlines, curved metrics, chronology constraints and independent physics review.
 
 - Build interactive 1+1D Minkowski diagrams and distinguish invariant intervals.
 - Model light cones, future/past domains, simultaneity and accelerating observers.
@@ -58,7 +60,7 @@ Which time effects have been measured, which are extrapolations within accepted 
 ## Research issues to open
 
 1. Validate weak-field height model against a NIST publication and uncertainty budget.
-2. Add 1+1D Lorentz boost transformations and invariant tests.
+2. Add 1+1D Lorentz boost transformations and invariant tests. **Implemented in v0.2**.
 3. Create evidence-record JSON schema and CI provenance validation.
 4. Summarize chronology protection and quantum energy inequalities.
 5. Implement a *labeled simulation* of a postselected CTC protocol, including success rates.

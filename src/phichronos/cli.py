@@ -7,6 +7,7 @@ from .relativity import (
     altitude_time_gain_ns_per_day,
 )
 from .causality import classify_interval, proper_time_seconds
+from .boost import lorentz_boost, minkowski_interval_m2, causal_region
 
 
 def main() -> None:
@@ -21,6 +22,10 @@ def main() -> None:
     i = sub.add_parser("interval", help="flat spacetime event separation")
     i.add_argument("--dt-seconds", type=float, required=True)
     i.add_argument("--distance-meters", type=float, required=True)
+    b = sub.add_parser("boost", help="Lorentz boost of 1+1D flat-spacetime event")
+    b.add_argument("--beta", type=float, required=True)
+    b.add_argument("--time-seconds", type=float, required=True)
+    b.add_argument("--x-meters", type=float, required=True)
     args = parser.parse_args()
 
     try:
@@ -37,6 +42,17 @@ def main() -> None:
                 "model": "fixed-g weak field approximation, no orbital motion",
                 "height_m": args.meters,
                 "clock_gain_ns_per_day": altitude_time_gain_ns_per_day(args.meters),
+            }
+        elif args.model == "boost":
+            tp, xp = lorentz_boost(args.time_seconds, args.x_meters, args.beta)
+            result = {
+                "model": "Lorentz boost between inertial frames in flat 1+1D spacetime",
+                "beta": args.beta,
+                "unprimed": {"t_seconds": args.time_seconds, "x_meters": args.x_meters},
+                "primed": {"t_seconds": tp, "x_meters": xp},
+                "signed_interval_m2": minkowski_interval_m2(args.time_seconds, args.x_meters),
+                "primed_signed_interval_m2": minkowski_interval_m2(tp, xp),
+                "causal_region": causal_region(args.time_seconds, args.x_meters),
             }
         else:
             kind = classify_interval(args.dt_seconds, args.distance_meters)

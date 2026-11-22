@@ -18,3 +18,10 @@ For purely theoretical CTC claims, provide the metric, signature, coordinate ran
 
 ### Peer review standard
 Independent replication comes before striking headlines. A quantum simulation of a time-loop *model* is not an observation of time-loop spacetime.
+
+### Lorentz boost consistency checks (v0.2)
+- A positive beta means S′ moves toward +x relative to S. Events are transformed as t′=γ(t−βx/c), x′=γ(x−βct).
+- The signed interval uses signature (+,−): s²=(cΔt)²−(Δx)². It is invariant under boosts, including for spacelike intervals.
+- The web visual uses light-seconds for x and ct. Multiplying a time coordinate in seconds by c yields meters; one light-second is the distance c travels in one SI second.
+- Event B is relative to event A at origin; boosted plotted axes are coordinate axes, not trajectories through a wormhole.
+- Near a null interval numerical cancellation can cause rounding; compare with a scale-relative tolerance. Both Python and JS engines have independent tests.
