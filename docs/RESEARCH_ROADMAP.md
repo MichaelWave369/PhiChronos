@@ -1,4 +1,4 @@
-# Research roadmap | version 0.6
+# Research roadmap | version 0.7
 
 ## The guiding question
 
@@ -43,6 +43,10 @@ Which time effects have been measured, which are extrapolations within accepted 
 - Separate 'exists in a mathematical metric' from 'could be created in our universe.'
 
 **Exit criteria:** a constraint matrix with arguments both for and against physical realizability.
+
+## v0.7 - Published curved-spacetime QEI reference, different dimension
+
+Implemented Flanagan's 2002 (corrected arXiv v4, 2020) **1+1D curved** massless-scalar QEI with compact sampling and a globally conformal Minkowski background. Exactly reproduces the flat alpha=0 limit; independent quadrature and numerical-curvature tests; output **energy per length J/m**, not 4D J/m³. This is a real curved-spacetime theorem for a separate 2D background, **NOT** a valid QEI/compliance computation for our 4D wormhole. See docs/QEI_CURVED_2D.md.
 
 ## v0.6 - Finite-duration quantum sampling and curvature diagnostics
 

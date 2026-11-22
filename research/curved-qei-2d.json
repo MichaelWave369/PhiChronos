@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "QEI-007-2D-CURVED-BENCHMARK",
+  "classification": "real published curved-spacetime quantum energy inequality, strictly 1+1 dimensional",
+  "references": {
+    "original": "https://doi.org/10.1103/PhysRevD.66.104007",
+    "corrected_arxiv_v4": "https://arxiv.org/pdf/gr-qc/0208066",
+    "erratum": "https://doi.org/10.1103/PhysRevD.102.129901",
+    "extension": "https://doi.org/10.1103/PhysRevD.70.127501",
+    "four_dimensional_context": "https://arxiv.org/abs/gr-qc/0702056"
+  },
+  "theorem": "Flanagan (2002), Eq. 1.7: weighted energy >= -(1/24pi) integral [rho_prime^2/rho + rho*a^2 + rho*R] in geometric units and source Ricci sign",
+  "spacetime": "1+1 dimensional, metric exp[2alpha exp(-x²/(2L²))](-c²dt²+dx²), globally conformal to Minkowski",
+  "field": "one free massless real scalar; renormalized stress expectation in admissible states",
+  "observer": "static geodesic x=0, where lapse spatial derivative and acceleration vanish",
+  "sampler": "finite C-infinity b² smooth bump normalized on [-tau,tau], b=exp[-1/(1-u²)]",
+  "dimension": "energy per length J/m, not energy per volume J/m³",
+  "geometry": "Ricci scalar at center = 2alpha*exp(-2alpha)/L² in paper's sign convention",
+  "gradient_coefficient": "4*I1/I0, I1 integral (b'(u))² du; independent Simpson and midpoint quadrature",
+  "valid_2d_curved_qei_benchmark": true,
+  "applies_to_four_dimensional_wormhole": false,
+  "quantum_state_constructed": false,
+  "backreaction_solved": false,
+  "limitations": [
+    "The bound applies to the separate two-dimensional model and cannot decide the viability of a 4D wormhole.",
+    "Toy plateau is not a quantum state.",
+    "A curved-space theorem for the 4D wormhole and self-consistent backreaction remain open.",
+    "Original 2002 work has a 2020 erratum to Sec. II; arXiv v4 includes corrections."
+  ],
+  "validation": [
+    "zero-curvature Minkowski limit",
+    "independent first-derivative quadrature",
+    "numerical Ricci from conformal factor",
+    "unit dimensional gate",
+    "positive curvature correction",
+    "zero-acceleration geodesic center",
+    "toy necessary condition"
+  ]
+}

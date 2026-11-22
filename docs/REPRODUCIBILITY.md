@@ -47,3 +47,8 @@ Independent replication comes before striking headlines. A quantum simulation of
 - Genuine C-infinity compact bump normalized by Simpson-integrated I0; its second derivative integral I2 independently midpoint-checked. Ratio I2/I0=81.40794654325808.
 - Fewster–Eveson Eq. 5.5 gives flat free scalar bound; its finite support does not allow transfer to a curved Morris–Thorne throat. Quantum state, Hadamard renormalization, and backreaction remain unevaluated.
 - Independently check sectional components R_ltheta=-r0²/r⁴, R_thetaphi=+r0²/r⁴; derive Ricci=-2r0²/r⁴, Kretschmann=12r0⁴/r⁸. The scale comparison c*tau/L is a diagnostic, never a curved QEI verdict.
+
+### v0.7 curved 1+1D theorem reproduction
+- Flanagan Eq.1.7 (2002; corrected v4 2020) for a geodesic at x=0 in globally conformal 1+1D static background sigma(x)=alpha exp(-x²/2L²). Curvature term explicitly included and separately testable.
+- Normalized smooth bump computes I0 and first-derivative integral I1 with Simpson and independent midpoint; Ricci center analytically compared with finite-difference conformal factor.
+- Restored SI units J/m and enforced 2D dimension labels; no comparison to 4D wormhole stress J/m³. No 4D field state, curved Hadamard QEI or backreaction solved.

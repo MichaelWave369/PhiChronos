@@ -14,6 +14,7 @@ from .wormhole import evaluate_wormhole
 from .qei import flat_qei_bounds, sampled_toy_pulse, wormhole_domain_audit
 from .qei_compact import compact_flat_qei, compact_plateau_trial
 from .curvature import curvature_audit
+from .qei_curved2d import curved_2d_bound, curved_2d_trial
 
 
 def main() -> None:
@@ -57,6 +58,11 @@ def main() -> None:
     curv.add_argument("--throat-m", type=float, required=True)
     curv.add_argument("--ratio", type=float, default=1.0)
     curv.add_argument("--tau-s", type=float, required=True)
+    two = sub.add_parser("qei-curved2d", help="Flanagan theorem: real curved 1+1D spacetime, not a 4D wormhole bound")
+    two.add_argument("--alpha",type=float,required=True)
+    two.add_argument("--length-m",type=float,required=True)
+    two.add_argument("--tau-s",type=float,required=True)
+    two.add_argument("--plateau-amplitude-j-per-m",type=float,default=None)
     args = parser.parse_args()
 
     try:
@@ -80,6 +86,10 @@ def main() -> None:
         elif args.model == "qei":
             result = flat_qei_bounds(args.tau_s) if args.pulse_amplitude_j_m3 is None else sampled_toy_pulse(
                 args.pulse_amplitude_j_m3, args.pulse_width_s, args.tau_s)
+        elif args.model == "qei-curved2d":
+            result = (curved_2d_bound(args.alpha,args.length_m,args.tau_s)
+                      if args.plateau_amplitude_j_per_m is None
+                      else curved_2d_trial(args.alpha,args.length_m,args.tau_s,args.plateau_amplitude_j_per_m))
         elif args.model == "qei-compact":
             result = (compact_flat_qei(args.tau_s) if args.plateau_amplitude_j_m3 is None
                       else compact_plateau_trial(args.plateau_amplitude_j_m3,args.tau_s))
