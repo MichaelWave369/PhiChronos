@@ -12,7 +12,7 @@ export function wormholeAt(throatMeters, ratio=1){
   }
   const r=throatMeters*ratio
   const b=throatMeters**2/r
-  const bp=-(throatMeters/r)**2
+  const bp=-((throatMeters/r)**2)
   const epsilon=MORRIS_SCALE * bp/(r*r)
   const radial=-MORRIS_SCALE * b/(r**3)
   const tangential=MORRIS_SCALE * (b-r*bp)/(2*r**3)
