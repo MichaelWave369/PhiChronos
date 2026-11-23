@@ -64,3 +64,9 @@ Independent replication comes before striking headlines. A quantum simulation of
 - Independent flat tests include Hermiticity, positive-type Gram matrix, and epsilon^-2 UV coincidence scaling.
 - Ellis s-wave scattering channel complex t/r from real RK4 transfer; check matching, parity, flux conservation, formal delta(kappa) KG coefficient N=1/sqrt(4*pi*kappa), and independent empty-barrier phase. A scattering channel is not a full complete quantum state.
 - Uncomputed: global all-ell mode sum, Hadamard singular structure on Ellis, stress renormalization, absolute 4D curved QEI, and semiclassical backreaction.
+
+### v1.0 spherical 4D flat quantum mode calibration and Ellis infrared audit
+- Spherical-Bessel addition sum from Rayleigh expansion, Legendre recursion and stable upward/downward Bessel computation, inserted into the positive-k flat Wightman integral. Compare to independent direct spectrum and exact analytic result.
+- Distinguish finite ell truncation from finite frequency cutoff (the latter has a conservative bound). No uniform angular truncation or curved-state completeness proof.
+- Elllis spatial massless -Delta_h Rayleigh test family with a compact smooth bump of width W centered at 12W along one end. Nonnegative form and Q~const/W² imply zero spectral gap, not a normalizable zero mode or absence of a quantum state.
+- Tests cover angular addition theorem, spherical recurrence, spectral agreement, angular convergence, Rayleigh scaling and strict unverified state/QEI gates.

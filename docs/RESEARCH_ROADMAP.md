@@ -1,4 +1,4 @@
-# Research roadmap | version 0.9
+# Research roadmap | version 1.0
 
 ## The guiding question
 
@@ -43,6 +43,10 @@ Which time effects have been measured, which are extrapolations within accepted 
 - Separate 'exists in a mathematical metric' from 'could be created in our universe.'
 
 **Exit criteria:** a constraint matrix with arguments both for and against physical realizability.
+
+## v1.0 - Spherical partial-wave flat 4D reconstruction and Ellis infrared spectral gate
+
+Independently reconstructed the 3+1D Minkowski vacuum correlator via spherical Bessel and Legendre mode sums, compared both to direct positive-frequency spectral quadrature and the analytic correlation. Established through smooth compact radial trial modes on the *complete Ellis spatial slice* that the massless spatial Klein–Gordon operator is nonnegative with spectral infimum zero; there is no strictly positive spectral gap. This is NOT a zero eigenmode, not a proof of absent Hadamard states, and not a 4D curved Hadamard/QEI solution.
 
 ## v0.9 - 4D Minkowski quantum-field reference and partial Ellis scattering mode normalization
 

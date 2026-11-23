@@ -17,6 +17,7 @@ from .curvature import curvature_audit
 from .qei_curved2d import curved_2d_bound, curved_2d_trial
 from .scalar_modes import s_wave_scattering
 from .quantum_reference import minkowski_spectral_quadrature, ellis_s_wave_channel
+from .spherical_reference import flat_spherical_wightman, ellis_ir_rayleigh
 
 
 def main() -> None:
@@ -81,6 +82,19 @@ def main() -> None:
     qm.add_argument("--kappa",type=float,required=True)
     qm.add_argument("--extent",type=float,default=32)
     qm.add_argument("--steps",type=int,default=4096)
+    sp=sub.add_parser("wightman-spherical",help="flat 4D spherical-mode Wightman benchmark; NOT a curved Ellis state")
+    sp.add_argument("--radius1-m",type=float,default=0.7)
+    sp.add_argument("--radius2-m",type=float,default=0.9)
+    sp.add_argument("--cos-angle",type=float,default=0.4)
+    sp.add_argument("--delta-ct-m",type=float,default=0.3)
+    sp.add_argument("--epsilon-m",type=float,default=0.5)
+    sp.add_argument("--ell-max",type=int,default=24)
+    sp.add_argument("--k-cutoff-per-m",type=float,default=80)
+    sp.add_argument("--steps",type=int,default=1024)
+    ir=sub.add_parser("ellis-infrared",help="positive KG operator with no strict massless spectral gap, NOT vacuum exclusion")
+    ir.add_argument("--throat-m",type=float,default=1)
+    ir.add_argument("--width-m",type=float,default=100)
+    ir.add_argument("--center-widths",type=float,default=12)
     args = parser.parse_args()
 
     try:
@@ -104,6 +118,11 @@ def main() -> None:
         elif args.model == "qei":
             result = flat_qei_bounds(args.tau_s) if args.pulse_amplitude_j_m3 is None else sampled_toy_pulse(
                 args.pulse_amplitude_j_m3, args.pulse_width_s, args.tau_s)
+        elif args.model == "wightman-spherical":
+            result=flat_spherical_wightman(args.radius1_m,args.radius2_m,args.cos_angle,
+                       args.delta_ct_m,args.epsilon_m,args.ell_max,args.k_cutoff_per_m,args.steps)
+        elif args.model == "ellis-infrared":
+            result=ellis_ir_rayleigh(args.throat_m,args.width_m,args.center_widths)
         elif args.model == "wightman-flat4d":
             result=minkowski_spectral_quadrature(args.delta_ct_m,args.separation_m,
                          args.epsilon_m,args.k_cutoff_per_m,args.steps)

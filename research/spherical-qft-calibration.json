@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "STATE-010-SPHERICAL-FLAT-BENCHMARK",
+  "classification": "3+1D free Minkowski vacuum spherical partial-wave reconstruction and Ellis infrared variational test",
+  "identity": "sinc(k*d)=sum_ell(2ell+1)j_ell(k*r1)j_ell(k*r2)P_ell(cos gamma)",
+  "wightman": "W=1/(4pi²) integral_0^infty dk k exp(-epsilon*k-i*k*delta_ct)*sum_ell...",
+  "dimension": "field two-point function in natural units m^-2, NOT renormalized energy density",
+  "integration": "composite Simpson k integral with fixed finite cutoff; stable upward/downward spherical Bessel recurrence; independent direct-spectrum and exact closed-form comparisons",
+  "angular_truncation": "finite ell_max in [0,40], numerical sensitivity only, no rigorous global tail bound",
+  "ellis_ir_packet": "radial smooth bump of width W centered at 12W on one asymptotic end of complete Ellis slice",
+  "ellis_ir_rayleigh": "Q=integral dl (l²+r0²)(psi')² / integral dl (l²+r0²)psi² ~ const/W² -> 0",
+  "spectral_statement": "-Delta_h nonnegative with inf spectrum 0; no strictly positive spectral gap established by smooth compact variational trial sequence",
+  "zero_eigenmode_established": false,
+  "hadamard_nonexistence_implied": false,
+  "ellis_hadamard_state_proven": false,
+  "ellis_wightman_constructed": false,
+  "curved_4d_qei_evaluated": false,
+  "backreaction_solved": false,
+  "sources": {
+    "bessel_reference": "NIST DLMF §10.60 spherical-Bessel addition theorems https://dlmf.nist.gov/10.60",
+    "rayleigh_expansion": "https://academic.oup.com/mnras/article/476/4/4403/4875946",
+    "ultrastatic_global_hyperbolicity": "https://doi.org/10.1007/s00029-023-00860-z",
+    "curved_absolute_qei": "https://arxiv.org/abs/gr-qc/0702056"
+  }
+}

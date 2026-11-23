@@ -6,7 +6,7 @@
 
 PhiChronos separates **measured effects**, **validated mathematical models**, and **unverified hypotheses**. The project does **not** claim that backward time travel is possible, or that simulating a closed timelike curve physically sends information to the past.
 
-## What's working in v0.9
+## What's working in v1.0
 
 - **Relativity engine (Python stdlib):** Lorentz factor, elapsed proper time, relativistic kinetic energy, stationary Schwarzschild clock comparison, and local weak-field altitude comparison.
 - **Causality tools:** classify timelike, lightlike, and spacelike separations in flat 1+1-dimensional spacetime.
@@ -20,6 +20,7 @@ PhiChronos separates **measured effects**, **validated mathematical models**, an
 - **Actual curved QEI v0.7:** Reproduces Flanagan's 2002 (corrected v4 2020) two-dimensional curved-spacetime inequality with a geodesic observer, exact curvature term, independent sampling quadrature, and strong dimensional guard: J/m ≠ 4D J/m³.
 - **Four-dimensional scalar-wave modes v0.8:** derive the massless minimally coupled Klein–Gordon radial potential on the fixed Ellis throat; numerical s-wave two-ended scattering, analytic low-k paper cross-check, independent square-barrier calibration and flux conservation. **Not** a QEI or stability proof.
 - **4D quantum-field reference v0.9:** exact massless Minkowski positive-frequency Wightman distribution with regulated numeric spectral integral; complex two-ended Ellis s-wave scattering amplitudes, flux/phase/KG convention tests. **No curved Ellis Hadamard state**, stress tensor, or 4D QEI yet.
+- **Spherical-vacuum/IR calibration v1.0:** independent 3+1D flat Wightman reconstruction from spherical Bessel/Legendre partial-wave modes, compared with direct spectral and exact correlator, plus an Ellis spatial massless Rayleigh sequence showing no uniform positive spectral gap. **Not** a curved 4D quantum state or a no-state theorem.
 - **Cited CTC constraint matrix:** Gödel, Kerr, Tipler, wormholes, Hawking chronology protection, and Minkowski quotient, with limitations and evidence status.
 - **Unit tests and GitHub Actions CI** for boundaries and reference values.
 - **React research dashboard** with live forward-time-travel and altitude clock simulations; source links and epistemic status labels.
@@ -48,6 +49,8 @@ Try the CLI:
     PYTHONPATH=src python -m phichronos.cli scalar-wave --throat-m 1 --kappa 0.5
     PYTHONPATH=src python -m phichronos.cli wightman-flat4d --delta-ct-m 0.3 --separation-m 0.7 --epsilon-m 0.5
     PYTHONPATH=src python -m phichronos.cli ellis-mode --throat-m 1 --kappa 0.5
+    PYTHONPATH=src python -m phichronos.cli wightman-spherical --ell-max 24
+    PYTHONPATH=src python -m phichronos.cli ellis-infrared --width-m 100
 
 For the browser dashboard:
 
@@ -66,7 +69,7 @@ Live site: https://michaelwave369.github.io/PhiChronos/
 4. Postselected CTC quantum circuit experiments emulate a mathematical model, **not physical travel into the past**.
 5. All claims must have a source, uncertainty/assumptions, reproducibility instructions, and a proposed falsification route.
 
-Read [Four-dimensional Wightman reference and mode-normalization caveats](docs/QUANTUM_STATE_REFERENCE_4D.md), [Four-dimensional scalar-wave modes](docs/SCALAR_MODES_4D.md), [Actual 1+1D curved QEI benchmark](docs/QEI_CURVED_2D.md), [Finite-support QEI and curvature diagnostics](docs/FINITE_SUPPORT_QEI.md), [Field-specific QEI model](docs/QEI_MODEL.md), [Wormhole model and constraints](docs/WORMHOLE_MODEL.md), [Chronology model](docs/CHRONOLOGY_MODEL.md), [Lorentz model methodology](docs/LORENTZ_MODEL.md), [Research Roadmap](docs/RESEARCH_ROADMAP.md), [Reproducibility](docs/REPRODUCIBILITY.md), and [Safety and Scope](docs/SAFETY_AND_SCOPE.md).
+Read [Spherical Wightman and Ellis infrared audit](docs/SPHERICAL_REFERENCE_AND_IR.md), [Four-dimensional Wightman reference and mode-normalization caveats](docs/QUANTUM_STATE_REFERENCE_4D.md), [Four-dimensional scalar-wave modes](docs/SCALAR_MODES_4D.md), [Actual 1+1D curved QEI benchmark](docs/QEI_CURVED_2D.md), [Finite-support QEI and curvature diagnostics](docs/FINITE_SUPPORT_QEI.md), [Field-specific QEI model](docs/QEI_MODEL.md), [Wormhole model and constraints](docs/WORMHOLE_MODEL.md), [Chronology model](docs/CHRONOLOGY_MODEL.md), [Lorentz model methodology](docs/LORENTZ_MODEL.md), [Research Roadmap](docs/RESEARCH_ROADMAP.md), [Reproducibility](docs/REPRODUCIBILITY.md), and [Safety and Scope](docs/SAFETY_AND_SCOPE.md).
 
 ## Sources to begin
 
