@@ -59,8 +59,8 @@ function WightmanSpherical(){
     </div><div className="spl-results">
       <div className="spl-stats">
         <Item name="FLAT SPATIAL SEPARATION" value={fmt(result.separation)+' m'} note="Euclidean geometry, not a wormhole distance"/>
-        <Item name="SPHERICAL MODE RECONSTRUCTION" value={sci(result.spherical_real_inverse_m2)+' + i('+sci(result.spherical_imag_inverse_m2)+')'} note="Computed from truncated ℓ series"/>
-        <Item name="EXACT 4D VACUUM" value={sci(result.analytic_real_inverse_m2)+' + i('+sci(result.analytic_imag_inverse_m2)+')'} note="Minkowski positive-frequency reference"/>
+        <Item name="SPHERICAL MODE RECONSTRUCTION" value={sci(result.real)+' + i('+sci(result.imag)+')'} note="Computed from truncated ℓ series"/>
+        <Item name="EXACT 4D VACUUM" value={sci(result.analyticReal)+' + i('+sci(result.analyticImag)+')'} note="Minkowski positive-frequency reference"/>
         <Item name="RELATIVE MODE-TO-EXACT ERROR" value={sci(rel)} note="Contains angular, k-cutoff and quadrature errors"/>
         <Item name="MODE SUM vs DIRECT SPECTRAL" value={sci(result.directDelta)} note="Independent angular-integrated quadrature"/>
         <Item name="K-CUTOFF TAIL BOUND" value={sci(result.cutoffTail)} note="Does not bound angular ℓ truncation"/>
