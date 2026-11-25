@@ -1,0 +1,7 @@
+# Logical time in the relational universe
+
+Separate computational causality from this project's physical-time research. Logical clock progress is not proper time, time travel or an extra physical time dimension.
+
+Model: events form a DAG with local order and message dependencies. A vector clock increments local component and merges componentwise maxima at receive. For complete vector-clock context, strict componentwise order represents happens-before; incomparable events are concurrent. A topological ordering is one allowed replay, not a universal timeline. Concurrent operations may fail to commute: starting at 1, add 1 then double gives 4; double then add 1 gives 3. Shared evidence sets may merge by idempotent union; state updates need explicit convergence or conflict policy. Reversal requires an inverse, checkpoint or compensation and must account for downstream events and external effects. Event IDs, dependency sets, rule epoch, source, destination, state hash and provenance should be retained.
+
+Earlier chat discussed a nine-event graph, enumeration and duplicate/out-of-order replay; the original script is not retained, so numerical counts are provisional until regenerated. Future acceptance: exact DAG oracle, causal-pair comparison, shuffled duplicate delivery, missing dependency refusal, cycle detection, deterministic replay, commutative and noncommutative controls, budgeted reversal. Existing Altermath causal belt is the implementation integration point; no change to physical models or production runtime.
